@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ******** head ******** -->
+<head>
+ <meta charset="utf-8">
+ <title>Ingress Intel Total Conversion</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="">
+ <meta name="author" content="">
+
+ <!-- Le styles -->
+ <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ <link href="/assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+ <link href="/assets/css/style.css" rel="stylesheet">
+ <link href="/assets/icomoon/style.css" rel="stylesheet">
+
+ <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+ <!--[if lt IE 9]>
+  <script src="assets/html5shiv/html5shiv.js"></script>
+ <![endif]-->
+
+ <!-- android uses the apple icons when adding shortcuts - looks better than favicons -->
+ <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+
+ <style>
+ .nowrap { white-space: nowrap; }
+ </style>
+
+</head>
+
+<!-- ******** body ******** -->
+<body>
+<div class="container">
+
+ <!-- **** page header **** -->
+ <div class="header well">
+  <div class="media">
+   <a class="pull-left" href="/">
+    <img class="media-object" src="assets/img/logo.png" title="IITC" alt="IITC Logo">
+   </a>
+   <div class="media-body">
+    <h1 class="media-heading">Ingress Intel Total Conversion</h1>
+
+<div class="g-plusone" data-annotation="inline" data-width="300" data-href="http://www.iitc.me/"></div>
+
+   </div>
+  </div>
+ </div>
+
+
+ <!-- **** top alert box **** -->
+ <div class="alert alert-block alert-info">
+  Follow the
+  <b><a href="https://plus.google.com/105383756361375410867"><span class="icon-google-plus"></span> IITC page</a></b>
+  for release announcements.
+  Join the
+  <b><a href="https://plus.google.com/communities/105647403088015055797"><span class="icon-google-plus"></span> IITC Community</a></b>
+  - a place to ask for help and discuss with other users.
+ </div>
+
+ <!-- **** alert box when standard intel site changes **** -->
+ <!--
+ <div class="alert alert-block alert-danger">
+  <b>IITC has yet again been broken by changes Niantic have made.</b> Further information/discussion on
+  <a href="xxxxxxxxxxxxxxxxxxx">this Google+ post</a>.
+ </div>
+-->
+
+ <!-- **** two column body area **** -->
+ <div class="row">
+
+  <!-- **** navigation **** -->
+  <div class="col-md-3">
+
+   <div class="list-group nowrap">
+<a class="list-group-item" href="/"><span class="icon-house"></span> Home</a>
+<a class="list-group-item" href="/news/"><span class="icon-newspaper"></span> News</a>
+<a class="list-group-item" href="/faq/"><span class="icon-help"></span> FAQ</a>
+<div class="list-group-item"><div class="text-muted"><span class="icon-arrow-right"></span> Downloads</div><div class="list-group"><a class="list-group-item active" href="/desktop/"><span class="icon-screen"></span> Desktop</a>
+<a class="list-group-item" href="/mobile/"><span class="icon-mobile"></span> Mobile</a>
+<a class="list-group-item" href="/test/"><span class="icon-tools"></span> Test Builds</a>
+</div></div><a class="list-group-item" href="/developer/"><span class="icon-cog"></span> Developers</a>
+<a class="list-group-item" href="/about/"><span class="icon-info"></span> About</a>
+<a class="list-group-item" href="/donate/"><span class="icon-arrow-right"></span> Donate</a>
+   </div>
+  </div>
+  <!-- **** end of navigation **** -->
+
+
+  <!-- **** page body **** -->
+  <div class="col-md-9">
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+<h2>IITC Browser Addon</h2>
+
+
+<h3>Requirements</h3>
+
+<p>
+IITC will work in the Chrome or Firefox browsers. It should also work with Opera and other browsers supporting
+userscripts, but these are far less tested. For Android phones, please see the <a href="?page=mobile">mobile</a> page.
+</p>
+
+<h4>Chrome</h4>
+
+<p>
+Although it is possible to install userscripts directly as extensions, the recommended method is to use
+<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a>.
+Once Tampermonkey is installed, click on the "Download" button below and follow the instructions.
+</p>
+
+<h4>Firefox</h4>
+
+<p>
+Install the <a href="https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/">Greasemonkey</a> Firefox add-on.
+Once installed, click the "Download" then "Install" on the dialog.
+</p>
+
+<h4>Other browsers</h4>
+
+<p>
+Check your browser documentation for details on installing userscripts.
+</p>
+
+<h3>Updating</h3>
+
+<p>
+If IITC is already installed, it's easy to update in most cases:
+</p>
+
+<h4>Chrome and Tampermonkey</h4>
+
+<p>
+Open the Tampermonkey menu and choose "Check for userscript updates". If you have a lot of plugins, or other scripts
+installed, this can be a little slow. Wait 30 seconds, then try clicking the Tampermonkey icon again; if the menu opens,
+it's finished updating. Once complete, reload the Ingress intel map to use the new version.
+</p>
+
+<h4>Firefox and Greasemonkey</h4>
+
+<p>
+Open the Greasemonkey menu and choose "Manage user scripts". Now click the cog icon and choose "Check for updates".
+However, sometimes Greasemonkey fails to update all scripts. Check the date+time listed at the start of the description
+(e.g. "[jonatkins-2013-08-23-042102]") and if any have failed to update then manually download from the list below.
+Once updated, reload the Intel map and the new version will be active.
+</p>
+
+
+<h3>Download</h3>
+
+<p>IITC version 0.25.1<small class="text-muted">.20150917.154202</small></p>
+<a class="btn btn-large btn-primary" onclick="if(track){track('desktop','iitc','build/release');}" href="build/release/total-conversion-build.user.js" target="_blank">Download</a>
+
+<hr>
+
+
+<h4>Plugins</h4>
+
+<p>
+Plugins extend/modify the IITC experience. You do <b>not</b> need to install all plugins. Some are only useful to
+a minority of users.
+</p>
+
+<table class="table table-condensed">
+ <thead>
+  <tr>
+   <th>Name</th>
+   <th>Popularity</th>
+   <th>ID</th>
+   <th>Version</th>
+<!--
+   <th>Description</th>
+-->
+   <th>Download</th>
+  </tr>
+ </thead>
+ <tbody>
+
+<tr class="category_header"><th colspan="1">Category: Portal Info</th><td colspan="4">Enhanced information on the selected portal</td></tr>
+<tr><td class="empty" colspan="4">(no plugins in this category)</td></tr>
+<tr class="category_header"><th colspan="1">Category: Info</th><td colspan="4">Display additional information</td></tr>
+<tr><td class="empty" colspan="4">(no plugins in this category)</td></tr>
+<tr class="category_header"><th colspan="1">Category: Keys</th><td colspan="4">Manual key management</td></tr>
+<tr><td class="empty" colspan="4">(no plugins in this category)</td></tr>
+<tr class="category_header"><th colspan="1">Category: Controls</th><td colspan="4">Map controls/widgets</td></tr>
+<tr><td class="empty" colspan="4">(no plugins in this category)</td></tr>
+<tr class="category_header"><th colspan="1">Category: Highlighter</th><td colspan="4">Portal highlighters</td></tr>
+<tr><td class="empty" colspan="4">(no plugins in this category)</td></tr>
+<tr class="category_header"><th colspan="1">Category: Layer</th><td colspan="4">Additional map layers</td></tr>
+<tr><td class="empty" colspan="4">(no plugins in this category)</td></tr>
+<tr class="category_header"><th colspan="1">Category: Map Tiles</th><td colspan="4">Alternative map layers</td></tr>
+<tr><td class="empty" colspan="4">(no plugins in this category)</td></tr>
+<tr class="category_header"><th colspan="1">Category: Tweaks</th><td colspan="4">Adjust IITC settings</td></tr>
+<tr><td class="empty" colspan="4">(no plugins in this category)</td></tr>
+<tr class="category_header"><th colspan="1">Category: Misc</th><td colspan="4">Unclassified plugins</td></tr>
+<tr><td class="empty" colspan="4">(no plugins in this category)</td></tr>
+<tr class="category_header"><th colspan="1">Category: Obsolete</th><td colspan="4">Plugins that are no longer recommended, due to being superceded by others or similar</td></tr>
+<tr><td class="empty" colspan="4">(no plugins in this category)</td></tr>
+<tr class="category_header"><th colspan="1">Category: Deleted</th><td colspan="4">Deleted plugins - listed here for reference only. No download available</td></tr>
+<tr><td class="empty" colspan="4">(no plugins in this category)</td></tr>
+ </tbody>
+</table>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- **** end of page body **** -->
+
+ </div> <!-- row - for navigation + page body -->
+
+
+ <!-- **** footer **** -->
+ <div class="alert alert-block alert-danger">
+ <span class="icon-warning"></span>
+ This site and the scripts are not officially affiliated with Ingress or Niantic Labs at Google.
+ Using these scripts is likely to be considered against the Ingress Terms of Service. Any use is at your own risk.
+ </div>
+
+
+</div> <!-- container -->
+
+<!-- ******** javascript includes ******** -->
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+
+
+</body>
+</html>
