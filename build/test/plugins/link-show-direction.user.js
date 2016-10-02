@@ -2,19 +2,19 @@
 // @id             iitc-plugin-link-show-direction
 // @name           IITC plugin: Show the direction of links on the map
 // @category       Tweaks
-// @version        0.2.1.20151111.74206
+// @version        0.2.1.20161002.182714
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://secure.jonatkins.com/iitc/test/plugins/link-show-direction.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/test/plugins/link-show-direction.user.js
-// @description    [jonatkins-test-2015-11-11-074206] Show the direction of links on the map by adding short dashes to the line at the origin portal.
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
-// @include        https://www.ingress.com/mission/*
-// @include        http://www.ingress.com/mission/*
-// @match          https://www.ingress.com/mission/*
-// @match          http://www.ingress.com/mission/*
+// @updateURL      https://iitc.me/build/test/plugins/link-show-direction.meta.js
+// @downloadURL    https://iitc.me/build/test/plugins/link-show-direction.user.js
+// @description    [iitc-test-2016-10-02-182714] Show the direction of links on the map by adding short dashes to the line at the origin portal.
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==
 
@@ -25,8 +25,8 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
-plugin_info.buildName = 'jonatkins-test';
-plugin_info.dateTimeVersion = '20151111.74206';
+plugin_info.buildName = 'iitc-test';
+plugin_info.dateTimeVersion = '20161002.182714';
 plugin_info.pluginId = 'link-show-direction';
 //END PLUGIN AUTHORS NOTE
 

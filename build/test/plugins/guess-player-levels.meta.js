@@ -2,18 +2,18 @@
 // @id             iitc-plugin-guess-player-levels@breunigs
 // @name           IITC plugin: guess player level
 // @category       Info
-// @version        0.5.7.20151111.74206
+// @version        0.5.7.20161002.182714
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://secure.jonatkins.com/iitc/test/plugins/guess-player-levels.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/test/plugins/guess-player-levels.user.js
-// @description    [jonatkins-test-2015-11-11-074206] Try to determine player levels from the data available in the current view.
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
-// @include        https://www.ingress.com/mission/*
-// @include        http://www.ingress.com/mission/*
-// @match          https://www.ingress.com/mission/*
-// @match          http://www.ingress.com/mission/*
+// @updateURL      https://iitc.me/build/test/plugins/guess-player-levels.meta.js
+// @downloadURL    https://iitc.me/build/test/plugins/guess-player-levels.user.js
+// @description    [iitc-test-2016-10-02-182714] Try to determine player levels from the data available in the current view.
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==

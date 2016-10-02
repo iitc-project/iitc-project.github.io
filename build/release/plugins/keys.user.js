@@ -2,19 +2,19 @@
 // @id             iitc-plugin-keys@xelio
 // @name           IITC plugin: Keys
 // @category       Keys
-// @version        0.3.0.20150917.154202
+// @version        0.3.0.20161002.182710
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://secure.jonatkins.com/iitc/release/plugins/keys.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/release/plugins/keys.user.js
-// @description    [jonatkins-2015-09-17-154202] Allow manual entry of key counts for each portal. Use the 'keys-on-map' plugin to show the numbers on the map, and 'sync' to share between multiple browsers or desktop/mobile.
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
-// @include        https://www.ingress.com/mission/*
-// @include        http://www.ingress.com/mission/*
-// @match          https://www.ingress.com/mission/*
-// @match          http://www.ingress.com/mission/*
+// @updateURL      https://iitc.me/build/release/plugins/keys.meta.js
+// @downloadURL    https://iitc.me/build/release/plugins/keys.user.js
+// @description    [iitc-2016-10-02-182710] Allow manual entry of key counts for each portal. Use the 'keys-on-map' plugin to show the numbers on the map, and 'sync' to share between multiple browsers or desktop/mobile.
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==
 
@@ -25,8 +25,8 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
-plugin_info.buildName = 'jonatkins';
-plugin_info.dateTimeVersion = '20150917.154202';
+plugin_info.buildName = 'iitc';
+plugin_info.dateTimeVersion = '20161002.182710';
 plugin_info.pluginId = 'keys';
 //END PLUGIN AUTHORS NOTE
 

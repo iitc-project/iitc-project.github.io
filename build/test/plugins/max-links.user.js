@@ -2,18 +2,18 @@
 // @id             max-links@boombuler
 // @name           IITC plugin: Max Links
 // @category       Layer
-// @version        0.4.3.20151111.74206
-// @updateURL      https://secure.jonatkins.com/iitc/test/plugins/max-links.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/test/plugins/max-links.user.js
-// @description    [jonatkins-test-2015-11-11-074206] Calculate how to link the portals to create a reasonably tidy set of links/fields. Enable from the layer chooser. (Max Links is a poor name, but remains for historical reasons.)
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
-// @include        https://www.ingress.com/mission/*
-// @include        http://www.ingress.com/mission/*
-// @match          https://www.ingress.com/mission/*
-// @match          http://www.ingress.com/mission/*
+// @version        0.4.3.20161002.182714
+// @updateURL      https://iitc.me/build/test/plugins/max-links.meta.js
+// @downloadURL    https://iitc.me/build/test/plugins/max-links.user.js
+// @description    [iitc-test-2016-10-02-182714] Calculate how to link the portals to create a reasonably tidy set of links/fields. Enable from the layer chooser. (Max Links is a poor name, but remains for historical reasons.)
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==
 
@@ -24,8 +24,8 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
-plugin_info.buildName = 'jonatkins-test';
-plugin_info.dateTimeVersion = '20151111.74206';
+plugin_info.buildName = 'iitc-test';
+plugin_info.dateTimeVersion = '20161002.182714';
 plugin_info.pluginId = 'max-links';
 //END PLUGIN AUTHORS NOTE
 

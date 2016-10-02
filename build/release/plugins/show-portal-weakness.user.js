@@ -2,19 +2,19 @@
 // @id             iitc-plugin-show-portal-weakness@vita10gy
 // @name           IITC plugin: show portal weakness
 // @category       Highlighter
-// @version        0.7.2.20150917.154202
+// @version        0.7.2.20161002.182710
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://secure.jonatkins.com/iitc/release/plugins/show-portal-weakness.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/release/plugins/show-portal-weakness.user.js
-// @description    [jonatkins-2015-09-17-154202] Use the fill color of the portals to denote if the portal is weak. Stronger red indicates recharge required, missing resonators, or both.
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
-// @include        https://www.ingress.com/mission/*
-// @include        http://www.ingress.com/mission/*
-// @match          https://www.ingress.com/mission/*
-// @match          http://www.ingress.com/mission/*
+// @updateURL      https://iitc.me/build/release/plugins/show-portal-weakness.meta.js
+// @downloadURL    https://iitc.me/build/release/plugins/show-portal-weakness.user.js
+// @description    [iitc-2016-10-02-182710] Use the fill color of the portals to denote if the portal is weak. Stronger red indicates recharge required, missing resonators, or both.
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==
 
@@ -25,8 +25,8 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
-plugin_info.buildName = 'jonatkins';
-plugin_info.dateTimeVersion = '20150917.154202';
+plugin_info.buildName = 'iitc';
+plugin_info.dateTimeVersion = '20161002.182710';
 plugin_info.pluginId = 'show-portal-weakness';
 //END PLUGIN AUTHORS NOTE
 

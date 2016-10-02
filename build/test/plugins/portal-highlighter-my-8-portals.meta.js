@@ -2,18 +2,18 @@
 // @id             iitc-plugin-highlight-portals-my-8-portals@vita10gy
 // @name           IITC plugin: highlight my level 8's on portals
 // @category  Deleted
-// @version        0.1.0.20151111.74206
+// @version        0.1.0.20161002.182714
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://secure.jonatkins.com/iitc/test/plugins/portal-highlighter-my-8-portals.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/test/plugins/portal-highlighter-my-8-portals.user.js
+// @updateURL      https://iitc.me/build/test/plugins/portal-highlighter-my-8-portals.meta.js
+// @downloadURL    https://iitc.me/build/test/plugins/portal-highlighter-my-8-portals.user.js
 // @description    This plugin is no longer available, as Niantic optimisations have removed the data it needed.
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
-// @include        https://www.ingress.com/mission/*
-// @include        http://www.ingress.com/mission/*
-// @match          https://www.ingress.com/mission/*
-// @match          http://www.ingress.com/mission/*
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==

@@ -2,19 +2,19 @@
 // @id             iitc-plugin-regions@jonatkins
 // @name           IITC plugin: Show the local score regions
 // @category       Layer
-// @version        0.1.2.20150917.154202
+// @version        0.1.2.20161002.182710
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://secure.jonatkins.com/iitc/release/plugins/regions.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/release/plugins/regions.user.js
-// @description    [jonatkins-2015-09-17-154202] Show the local scoring regions on the map. No actual scores - just the region areas.
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
-// @include        https://www.ingress.com/mission/*
-// @include        http://www.ingress.com/mission/*
-// @match          https://www.ingress.com/mission/*
-// @match          http://www.ingress.com/mission/*
+// @updateURL      https://iitc.me/build/release/plugins/regions.meta.js
+// @downloadURL    https://iitc.me/build/release/plugins/regions.user.js
+// @description    [iitc-2016-10-02-182710] Show the local scoring regions on the map. No actual scores - just the region areas.
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==
 
@@ -25,8 +25,8 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
-plugin_info.buildName = 'jonatkins';
-plugin_info.dateTimeVersion = '20150917.154202';
+plugin_info.buildName = 'iitc';
+plugin_info.dateTimeVersion = '20161002.182710';
 plugin_info.pluginId = 'regions';
 //END PLUGIN AUTHORS NOTE
 
@@ -253,8 +253,6 @@ S2.S2Cell.FromLatLng = function(latLng,level) {
   var ij = STToIJ(st,level);
 
   return S2.S2Cell.FromFaceIJ (faceuv[0], ij, level);
-
-  return result;
 };
 
 S2.S2Cell.FromFaceIJ = function(face,ij,level) {

@@ -2,19 +2,19 @@
 // @id             iitc-plugin-basemap-opencyclepam@jonatkins
 // @name           IITC plugin: OpenCycleMap.org map tiles
 // @category       Map Tiles
-// @version        0.1.1.20150917.154202
+// @version        0.2.0.20161002.182710
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://secure.jonatkins.com/iitc/release/plugins/basemap-opencyclemap.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/release/plugins/basemap-opencyclemap.user.js
-// @description    [jonatkins-2015-09-17-154202] Add the OpenCycleMap.org map tiles as an optional layer.
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
-// @include        https://www.ingress.com/mission/*
-// @include        http://www.ingress.com/mission/*
-// @match          https://www.ingress.com/mission/*
-// @match          http://www.ingress.com/mission/*
+// @updateURL      https://iitc.me/build/release/plugins/basemap-opencyclemap.meta.js
+// @downloadURL    https://iitc.me/build/release/plugins/basemap-opencyclemap.user.js
+// @description    [iitc-2016-10-02-182710] Add the OpenCycleMap.org map tiles as an optional layer.
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==
 
@@ -25,8 +25,8 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
-plugin_info.buildName = 'jonatkins';
-plugin_info.dateTimeVersion = '20150917.154202';
+plugin_info.buildName = 'iitc';
+plugin_info.dateTimeVersion = '20161002.182710';
 plugin_info.pluginId = 'basemap-opencyclemap';
 //END PLUGIN AUTHORS NOTE
 
@@ -36,21 +36,29 @@ plugin_info.pluginId = 'basemap-opencyclemap';
 
 
 // use own namespace for plugin
-window.plugin.mapTileOpenCycleMap = function() {};
+window.plugin.mapTileOpenCycleMap = {
+  addLayer: function() {
+    //the Thunderforest (OpenCycleMap) tiles are free to use - http://www.thunderforest.com/terms/
 
-window.plugin.mapTileOpenCycleMap.addLayer = function() {
+    var ocmOpt = {
+      attribution: 'Tiles © OpenCycleMap, Map data © OpenStreetMap',
+      maxNativeZoom: 18,
+      maxZoom: 21,
+    };
 
-  //the Thunderforest (OpenCycleMap) tiles are free to use - http://www.thunderforest.com/terms/
+    var layers = {
+      'cycle': 'OpenCycleMap',
+      'transport': 'Transport',
+      'transport-dark': 'Transport Dark',
+      'outdoors': 'Outdoors',
+      'landscape': 'Landscape',
+    };
 
-  osmAttribution = 'Map data © OpenStreetMap';
-  var ocmOpt = {attribution: 'Tiles © OpenCycleMap, '+osmAttribution, maxNativeZoom: 18, maxZoom: 21};
-  var ocmCycle = new L.TileLayer('http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png', ocmOpt);
-  var ocmTransport = new L.TileLayer('http://{s}.tile2.opencyclemap.org/transport/{z}/{x}/{y}.png', ocmOpt);
-  var ocmLandscape = new L.TileLayer('http://{s}.tile3.opencyclemap.org/landscape/{z}/{x}/{y}.png', ocmOpt);
-
-  layerChooser.addBaseLayer(ocmCycle, "Thunderforest OpenCycleMap");
-  layerChooser.addBaseLayer(ocmTransport, "Thunderforest Transport");
-  layerChooser.addBaseLayer(ocmLandscape, "Thunderforest Landscape");
+    for(var i in layers) {
+      var layer = new L.TileLayer('http://{s}.tile.thunderforest.com/' + i + '/{z}/{x}/{y}.png', ocmOpt);
+      layerChooser.addBaseLayer(layer, 'Thunderforest ' + layers[i]);
+    }
+  },
 };
 
 var setup =  window.plugin.mapTileOpenCycleMap.addLayer;

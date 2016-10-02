@@ -2,19 +2,19 @@
 // @id             iitc-plugin-portals-count@yenky
 // @name           IITC plugin: Show total counts of portals
 // @category       Info
-// @version        0.1.2.20150917.154202
+// @version        0.1.2.20161002.182710
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://secure.jonatkins.com/iitc/release/plugins/portal-counts.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/release/plugins/portal-counts.user.js
-// @description    [jonatkins-2015-09-17-154202] Display a list of all localized portals by level and faction.
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
-// @include        https://www.ingress.com/mission/*
-// @include        http://www.ingress.com/mission/*
-// @match          https://www.ingress.com/mission/*
-// @match          http://www.ingress.com/mission/*
+// @updateURL      https://iitc.me/build/release/plugins/portal-counts.meta.js
+// @downloadURL    https://iitc.me/build/release/plugins/portal-counts.user.js
+// @description    [iitc-2016-10-02-182710] Display a list of all localized portals by level and faction.
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==
 
@@ -25,8 +25,8 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
-plugin_info.buildName = 'jonatkins';
-plugin_info.dateTimeVersion = '20150917.154202';
+plugin_info.buildName = 'iitc';
+plugin_info.dateTimeVersion = '20161002.182710';
 plugin_info.pluginId = 'portal-counts';
 //END PLUGIN AUTHORS NOTE
 

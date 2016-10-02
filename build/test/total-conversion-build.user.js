@@ -1,19 +1,19 @@
 // ==UserScript==
 // @id             ingress-intel-total-conversion@jonatkins
 // @name           IITC: Ingress intel map total conversion
-// @version        0.25.2.20151111.74206
+// @version        0.25.2.20161002.182714
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://secure.jonatkins.com/iitc/test/total-conversion-build.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/test/total-conversion-build.user.js
-// @description    [jonatkins-test-2015-11-11-074206] Total conversion for the ingress intel map.
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
-// @include        https://www.ingress.com/mission/*
-// @include        http://www.ingress.com/mission/*
-// @match          https://www.ingress.com/mission/*
-// @match          http://www.ingress.com/mission/*
+// @updateURL      https://iitc.me/build/test/total-conversion-build.meta.js
+// @downloadURL    https://iitc.me/build/test/total-conversion-build.user.js
+// @description    [iitc-test-2016-10-02-182714] Total conversion for the ingress intel map.
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==
 
@@ -21,7 +21,7 @@
 // REPLACE ORIG SITE ///////////////////////////////////////////////////
 if(document.getElementsByTagName('html')[0].getAttribute('itemscope') != null)
   throw('Ingress Intel Website is down, not a userscript issue.');
-window.iitcBuildDate = '2015-11-11-074206';
+window.iitcBuildDate = '2016-10-02-182714';
 
 // disable vanilla JS
 window.onload = function() {};
@@ -645,13 +645,21 @@ function createDefaultBaseMapLayers() {
   //OpenStreetMap attribution - required by several of the layers
   osmAttribution = 'Map data © OpenStreetMap contributors';
 
-  //MapQuest offer tiles - http://developer.mapquest.com/web/products/open/map
-  //their usage policy has no limits (except required notification above 4000 tiles/sec - we're perhaps at 50 tiles/sec based on CloudMade stats)
-  var mqSubdomains = [ 'otile1','otile2', 'otile3', 'otile4' ];
-  var mqTileUrlPrefix = window.location.protocol !== 'https:' ? 'http://{s}.mqcdn.com' : 'https://{s}-s.mqcdn.com';
-  var mqMapOpt = {attribution: osmAttribution+', Tiles Courtesy of MapQuest', maxNativeZoom: 18, maxZoom: 21, subdomains: mqSubdomains};
-  baseLayers['MapQuest OSM'] = new L.TileLayer(mqTileUrlPrefix+'/tiles/1.0.0/map/{z}/{x}/{y}.jpg',mqMapOpt);
+  // MapQuest - http://developer.mapquest.com/web/products/open/map
+  // now requires an API key
+  //var mqSubdomains = [ 'otile1','otile2', 'otile3', 'otile4' ];
+  //var mqTileUrlPrefix = window.location.protocol !== 'https:' ? 'http://{s}.mqcdn.com' : 'https://{s}-s.mqcdn.com';
+  //var mqMapOpt = {attribution: osmAttribution+', Tiles Courtesy of MapQuest', maxNativeZoom: 18, maxZoom: 21, subdomains: mqSubdomains};
+  //baseLayers['MapQuest OSM'] = new L.TileLayer(mqTileUrlPrefix+'/tiles/1.0.0/map/{z}/{x}/{y}.jpg',mqMapOpt);
 
+  // MapBox - https://www.mapbox.com/api-documentation/
+  // Access MapBox via the GNOME Project proxy.
+  // In the future, this URL will provide improved tiles from the GNOME Project with localized labels.
+  var gnomeStreetUrl = 'https://gis.gnome.org/tiles/street/v1/{z}/{x}/{y}';
+  var gnomeAerialUrl = 'https://gis.gnome.org/tiles/satellite/v1/{z}/{x}/{y}';
+  baseLayers['MapBox Street'] = L.tileLayer(gnomeStreetUrl);
+  baseLayers['MapBox Satellite'] = L.tileLayer(gnomeAerialUrl);
+  
   // cartodb has some nice tiles too - both dark and light subtle maps - http://cartodb.com/basemaps/
   // (not available over https though - not on the right domain name anyway)
   var cartoAttr = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>';
@@ -731,7 +739,7 @@ window.setupMap = function() {
     portalsFactionLayers[i] = [L.layerGroup(), L.layerGroup(), L.layerGroup()];
     portalsLayers[i] = L.layerGroup(portalsFactionLayers[i]);
     map.addLayer(portalsLayers[i]);
-    var t = (i === 0 ? 'Unclaimed' : 'Level ' + i) + ' Portals';
+    var t = (i === 0 ? 'Unclaimed/Placeholder' : 'Level ' + i) + ' Portals';
     addLayers[t] = portalsLayers[i];
     // Store it in hiddenLayer to remove later
     if(!isLayerGroupDisplayed(t, true)) hiddenLayer.push(portalsLayers[i]);
@@ -1274,7 +1282,7 @@ function boot() {
   if(!isSmartphone()) // TODO remove completely?
     window.debug.console.overwriteNativeIfRequired();
 
-  console.log('loading done, booting. Built: 2015-11-11-074206');
+  console.log('loading done, booting. Built: 2016-10-02-182714');
   if(window.deviceID) console.log('Your device ID: ' + window.deviceID);
   window.runOnSmartphonesBeforeBoot();
 
@@ -1343,7 +1351,7 @@ function boot() {
       $.each(badPlugins,function(name,desc) {
         warning += '<li><b>'+name+'</b>: '+desc+'</li>';
       });
-      warning += '</ul><p>Please uninstall the problem plugins and reload the page. See this <a href="http://iitc.jonatkins.com/?page=faq#uninstall">FAQ entry</a> for help.</p><p><i>Note: It is tricky for IITC to safely disable just problem plugins</i></p>';
+      warning += '</ul><p>Please uninstall the problem plugins and reload the page. See this <a href="http://iitc.me/faq/#uninstall">FAQ entry</a> for help.</p><p><i>Note: It is tricky for IITC to safely disable just problem plugins</i></p>';
 
       dialog({
         title: 'Plugin Warning',
@@ -6552,6 +6560,12 @@ L.Path = (L.Path.SVG && !window.L_PREFER_CANVAS) || !L.Browser.canvas ? L.Path :
 	_updateStyle: function () {
 		var options = this.options;
 
+        	if (options.dashArray) {
+            		var da = typeof(options.dashArray) === "string" ? options.dashArray.split(",").map(function(el,ix,ar) { return parseInt(el); }) : options.dashArray;
+            		this._ctx.setLineDash(da);
+        	} else {
+	        	this._ctx.setLineDash([]);
+        	}
 		if (options.stroke) {
 			this._ctx.lineWidth = options.weight;
 			this._ctx.strokeStyle = options.color;
@@ -6563,7 +6577,14 @@ L.Path = (L.Path.SVG && !window.L_PREFER_CANVAS) || !L.Browser.canvas ? L.Path :
 
 	_drawPath: function () {
 		var i, j, len, len2, point, drawMethod;
-
+		
+        	if (this.options.dashArray) {
+            		var da = typeof(this.options.dashArray) === "string" ? this.options.dashArray.split(",").map(function(el,ix,ar) { return parseInt(el); }) : this.options.dashArray;
+            		this._ctx.setLineDash(da);
+        	} else {
+			this._ctx.setLineDash([]);
+        	}
+        	
 		this._ctx.beginPath();
 
 		for (i = 0, len = this._parts.length; i < len; i++) {
@@ -6590,6 +6611,12 @@ L.Path = (L.Path.SVG && !window.L_PREFER_CANVAS) || !L.Browser.canvas ? L.Path :
 		var ctx = this._ctx,
 		    options = this.options;
 
+        	if (options.dashArray) {
+            		var da = typeof(options.dashArray) === "string" ? options.dashArray.split(",").map(function(el,ix,ar) { return parseInt(el); }) : options.dashArray;
+            		ctx.setLineDash(da);
+        	} else {
+	        	ctx.setLineDash([]);
+        	}
 		this._drawPath();
 		ctx.save();
 		this._updateStyle();
@@ -7518,6 +7545,12 @@ L.Polygon.include(!L.Path.CANVAS ? {} : {
 
 L.Circle.include(!L.Path.CANVAS ? {} : {
 	_drawPath: function () {
+		if (this.options.dashArray) {
+            		var da = typeof(this.options.dashArray) === "string" ? this.options.dashArray.split(",").map(function(el,ix,ar) { return parseInt(el); }) : this.options.dashArray;
+            		this._ctx.setLineDash(da);
+        	} else {
+			this._ctx.setLineDash([]);
+        	}
 		var p = this._point;
 		this._ctx.beginPath();
 		this._ctx.arc(p.x, p.y, this._radius, 0, Math.PI * 2, false);
@@ -12793,6 +12826,9 @@ window.updateGameScore = function(data) {
 //              the Leaflet CircleMarker for the portal in "portal" var.
 // linkAdded:   called when a link is about to be added to the map
 // fieldAdded:  called when a field is about to be added to the map
+// portalRemoved: called when a portal has been removed
+// linkRemoved: called when a link has been removed
+// fieldRemoved: called when a field has been removed
 // portalDetailsUpdated: fired after the details in the sidebar have
 //              been (re-)rendered Provides data about the portal that
 //              has been selected.
@@ -12824,6 +12860,7 @@ window.VALID_HOOKS = [
   'portalSelected', 'portalDetailsUpdated', 'artifactsUpdated',
   'mapDataRefreshStart', 'mapDataEntityInject', 'mapDataRefreshEnd',
   'portalAdded', 'linkAdded', 'fieldAdded',
+  'portalRemoved', 'linkRemoved', 'fieldRemoved',
   'publicChatDataAvailable', 'factionChatDataAvailable',
   'requestFinished', 'nicknameClicked',
   'geoSearch', 'search', 'iitcLoaded',
@@ -13003,6 +13040,14 @@ window.getPosition = function() {
     console.log("mappos: reading stock Intel URL params");
     var lat = parseFloat(getURLParam('ll').split(",")[0]) || 0.0;
     var lng = parseFloat(getURLParam('ll').split(",")[1]) || 0.0;
+    var z = parseInt(getURLParam('z')) || 17;
+    return {center: new L.LatLng(lat, lng), zoom: z};
+  }
+
+  if(getURLParam('pll')) {
+    console.log("mappos: reading stock Intel URL portal params");
+    var lat = parseFloat(getURLParam('pll').split(",")[0]) || 0.0;
+    var lng = parseFloat(getURLParam('pll').split(",")[1]) || 0.0;
     var z = parseInt(getURLParam('z')) || 17;
     return {center: new L.LatLng(lat, lng), zoom: z};
   }
@@ -13565,6 +13610,7 @@ window.Render.prototype.deletePortalEntity = function(guid) {
     window.ornaments.removePortal(p);
     this.removePortalFromMapLayer(p);
     delete window.portals[guid];
+    window.runHooks('portalRemoved', {portal: p, data: p.options.data });
   }
 }
 
@@ -13573,6 +13619,7 @@ window.Render.prototype.deleteLinkEntity = function(guid) {
     var l = window.links[guid];
     linksFactionLayers[l.options.team].removeLayer(l);
     delete window.links[guid];
+    window.runHooks('linkRemoved', {link: l, data: l.options.data });
   }
 }
 
@@ -13584,6 +13631,7 @@ window.Render.prototype.deleteFieldEntity = function(guid) {
 
     fieldsFactionLayers[f.options.team].removeLayer(f);
     delete window.fields[guid];
+    window.runHooks('fieldRemoved', {field: f, data: f.options.data });
   }
 }
 
@@ -15102,7 +15150,7 @@ window.renderPortalDetails = function(guid) {
  
 
   var img = fixPortalImageUrl(details ? details.image : data.image);
-  var title = (details && details.title) || (data && data.title) || '(untitled)';
+  var title = (details && details.title) || (data && data.title) || 'null';
 
   var lat = data.latE6/1E6;
   var lng = data.lngE6/1E6;
@@ -16300,6 +16348,7 @@ window.setupRedeem = function() {
     if((e.keyCode ? e.keyCode : e.which) !== 13) return;
 
     var passcode = $(this).val();
+    passcode = passcode.replace(/[^\x20-\x7E]+/g, ''); //removes non-printable characters
     if(!passcode) return;
 
     var jqXHR = window.postAjax('redeemReward', {passcode:passcode}, window.handleRedeemResponse, function(response) {
@@ -17445,15 +17494,15 @@ window.aboutIITC = function() {
   }
   plugins += '</ul>';
 
-  var attrib = '<p>This project is licensed under the permissive <a href="http://www.isc.org/downloads/software-support-policy/isc-license/">ISC license</a>. Parts imported from other projects remain under their respective licenses:</p>\n\n<ul>\n<li><a href="https://github.com/bryanwoods/autolink-js">autolink-js by Bryan Woods; MIT</a></li>\n<li><a href="https://github.com/chriso/load.js">load.js by Chris O\'Hara; MIT</a></li>\n<li><a href="http://leafletjs.com/">leaflet.js; custom license (but appears free)</a></li>\n<li><a href="https://github.com/Leaflet/Leaflet.draw">leaflet.draw.js by jacobtoye; MIT</a></li>\n<li>\n<a href="https://github.com/shramov/leaflet-plugins">leaflet_google.js by Pavel Shramov; same as Leaflet</a> (modified, though)</li>\n<li><a href="https://github.com/jeromeetienne/jquery-qrcode">jquery.qrcode.js by Jerome Etienne; MIT</a></li>\n<li><a href="https://github.com/jawj/OverlappingMarkerSpiderfier-Leaflet">oms.min.js by George MacKerron; MIT</a></li>\n<li><a href="https://github.com/richadams/jquery-taphold">taphold.js by Rich Adams; unknown</a></li>\n<li><a href="https://github.com/kartena/Leaflet.Pancontrol">L.Control.Pan.js by Kartena AB; same as Leaflet</a></li>\n<li><a href="https://github.com/kartena/Leaflet.zoomslider">L.Control.Zoomslider.js by Kartena AB; same as Leaflet</a></li>\n<li><a href="https://github.com/shramov/leaflet-plugins">KML.js by shramov; same as Leaflet</a></li>\n<li><a href="https://github.com/shramov/leaflet-plugins">leaflet.filelayer.js by shramov; same as Leaflet</a></li>\n<li><a href="https://github.com/shramov/leaflet-plugins">togeojson.js by shramov; same as Leaflet</a></li>\n<li>StackOverflow-CopyPasta is attributed in the source; <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-Wiki</a>\n</li>\n<li>all Ingress/Niantic related stuff obviously remains non-free and is still copyrighted by Niantic/Google</li>\n</ul>';
-  var contrib = '<p>So far, these people have contributed:</p>\n\n<p><a href="https://github.com/Bananeweizen">Bananeweizen</a>,\n<a href="https://github.com/blakjakau">blakjakau</a>,\n<a href="https://github.com/boombuler">boombuler</a>,\n<a href="https://github.com/breunigs">breunigs</a>,\n<a href="https://github.com/cathesaurus">cathesaurus</a>,\n<a href="https://github.com/ccjon">ccjon</a>,\n<a href="https://github.com/cmrn">cmrn</a>,\n<a href="https://github.com/epf">epf</a>,\n<a href="https://github.com/fkloft">fkloft</a>,\n<a href="https://github.com/Fragger">Fragger</a>,\n<a href="https://github.com/hastarin">hastarin</a>,\n<a href="https://github.com/integ3r">integ3r</a>,\n<a href="https://github.com/j16sdiz">j16sdiz</a>,\n<a href="https://github.com/JasonMillward">JasonMillward</a>,\n<a href="https://github.com/jonatkins">jonatkins</a>,\n<a href="https://github.com/leCradle">leCradle</a>,\n<a href="https://github.com/Merovius">Merovius</a>,\n<a href="https://github.com/mledoze">mledoze</a>,\n<a href="https://github.com/OshiHidra">OshiHidra</a>,\n<a href="https://github.com/phoenixsong6">phoenixsong6</a>,\n<a href="https://github.com/Pirozek">Pirozek</a>,\n<a href="https://github.com/saithis">saithis</a>,\n<a href="https://github.com/Scrool">Scrool</a>,\n<a href="https://github.com/sorgo">sorgo</a>,\n<a href="https://github.com/tpenner">tpenner</a>,\n<a href="https://github.com/vita10gy">vita10gy</a>,\n<a href="https://github.com/Xelio">Xelio</a>,\n<a href="https://github.com/ZauberNerd">ZauberNerd</a>,\n<a href="https://github.com/waynn">waynn</a></p>'
+  var attrib = '<p>This project is licensed under the permissive <a href="http://www.isc.org/downloads/software-support-policy/isc-license/">ISC license</a>. Parts imported from other projects remain under their respective licenses:</p>\n\n<ul>\n<li><a href="https://github.com/bryanwoods/autolink-js">autolink-js by Bryan Woods; MIT</a></li>\n<li><a href="https://github.com/chriso/load.js">load.js by Chris O\'Hara; MIT</a></li>\n<li><a href="http://leafletjs.com/">leaflet.js; custom license (but appears free)</a></li>\n<li><a href="https://github.com/Leaflet/Leaflet.draw">leaflet.draw.js by jacobtoye; MIT</a></li>\n<li>\n<a href="https://github.com/shramov/leaflet-plugins">leaflet_google.js by Pavel Shramov; same as Leaflet</a> (modified, though)</li>\n<li><a href="https://github.com/jeromeetienne/jquery-qrcode">jquery.qrcode.js by Jerome Etienne; MIT</a></li>\n<li><a href="https://github.com/jawj/OverlappingMarkerSpiderfier-Leaflet">oms.min.js by George MacKerron; MIT</a></li>\n<li><a href="https://github.com/richadams/jquery-taphold">taphold.js by Rich Adams; unknown</a></li>\n<li><a href="https://github.com/kartena/Leaflet.Pancontrol">L.Control.Pan.js by Kartena AB; same as Leaflet</a></li>\n<li><a href="https://github.com/kartena/Leaflet.zoomslider">L.Control.Zoomslider.js by Kartena AB; same as Leaflet</a></li>\n<li><a href="https://github.com/shramov/leaflet-plugins">KML.js by shramov; same as Leaflet</a></li>\n<li><a href="https://github.com/shramov/leaflet-plugins">leaflet.filelayer.js by shramov; same as Leaflet</a></li>\n<li><a href="https://github.com/shramov/leaflet-plugins">togeojson.js by shramov; same as Leaflet</a></li>\n<li>StackOverflow-CopyPasta is attributed in the source; <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-Wiki</a>\n</li>\n<li>all Ingress/Niantic related stuff obviously remains non-free and is still copyrighted by Niantic/Google</li>\n</ul>\n';
+  var contrib = '<p>So far, these people have contributed:</p>\n\n<p><a href="https://github.com/Bananeweizen">Bananeweizen</a>,\n<a href="https://github.com/blakjakau">blakjakau</a>,\n<a href="https://github.com/boombuler">boombuler</a>,\n<a href="https://github.com/breunigs">breunigs</a>,\n<a href="https://github.com/cathesaurus">cathesaurus</a>,\n<a href="https://github.com/ccjon">ccjon</a>,\n<a href="https://github.com/cmrn">cmrn</a>,\n<a href="https://github.com/epf">epf</a>,\n<a href="https://github.com/fkloft">fkloft</a>,\n<a href="https://github.com/Fragger">Fragger</a>,\n<a href="https://github.com/hastarin">hastarin</a>,\n<a href="https://github.com/integ3r">integ3r</a>,\n<a href="https://github.com/j16sdiz">j16sdiz</a>,\n<a href="https://github.com/JasonMillward">JasonMillward</a>,\n<a href="https://github.com/jonatkins">jonatkins</a>,\n<a href="https://github.com/leCradle">leCradle</a>,\n<a href="https://github.com/Merovius">Merovius</a>,\n<a href="https://github.com/mledoze">mledoze</a>,\n<a href="https://github.com/OshiHidra">OshiHidra</a>,\n<a href="https://github.com/phoenixsong6">phoenixsong6</a>,\n<a href="https://github.com/Pirozek">Pirozek</a>,\n<a href="https://github.com/saithis">saithis</a>,\n<a href="https://github.com/Scrool">Scrool</a>,\n<a href="https://github.com/sorgo">sorgo</a>,\n<a href="https://github.com/tpenner">tpenner</a>,\n<a href="https://github.com/vita10gy">vita10gy</a>,\n<a href="https://github.com/Xelio">Xelio</a>,\n<a href="https://github.com/ZauberNerd">ZauberNerd</a>,\n<a href="https://github.com/waynn">waynn</a></p>\n'
 
   var a = ''
   + '  <div><b>About IITC</b></div> '
   + '  <div>Ingress Intel Total Conversion</div> '
   + '  <hr>'
   + '  <div>'
-  + '    <a href="http://iitc.jonatkins.com/" target="_blank">IITC Homepage</a><br />'
+  + '    <a href="http://iitc.me/" target="_blank">IITC Homepage</a><br />'
   + '     On the script’s homepage you can:'
   + '     <ul>'
   + '       <li>Find Updates</li>'
@@ -17909,7 +17958,7 @@ L.Draggable.prototype._onDown = function(e) {
 
 // inject code into site context
 var script = document.createElement('script');
-var info = { buildName: 'jonatkins-test', dateTimeVersion: '20151111.74206' };
+var info = { buildName: 'iitc-test', dateTimeVersion: '20161002.182714' };
 if (this.GM_info && this.GM_info.script) info.script = { version: GM_info.script.version, name: GM_info.script.name, description: GM_info.script.description };
 script.appendChild(document.createTextNode('('+ wrapper +')('+JSON.stringify(info)+');'));
 (document.body || document.head || document.documentElement).appendChild(script);

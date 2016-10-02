@@ -2,19 +2,19 @@
 // @id             iitc-plugin-bookmarks@ZasoGD
 // @name           IITC plugin: Bookmarks for maps and portals
 // @category       Controls
-// @version        0.2.12.20150917.154202
+// @version        0.2.12.20161002.182710
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://secure.jonatkins.com/iitc/release/plugins/bookmarks-by-zaso.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/release/plugins/bookmarks-by-zaso.user.js
-// @description    [jonatkins-2015-09-17-154202] Save your favorite Maps and Portals and move the intel map with a click. Works with sync.
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
-// @include        https://www.ingress.com/mission/*
-// @include        http://www.ingress.com/mission/*
-// @match          https://www.ingress.com/mission/*
-// @match          http://www.ingress.com/mission/*
+// @updateURL      https://iitc.me/build/release/plugins/bookmarks-by-zaso.meta.js
+// @downloadURL    https://iitc.me/build/release/plugins/bookmarks-by-zaso.user.js
+// @description    [iitc-2016-10-02-182710] Save your favorite Maps and Portals and move the intel map with a click. Works with sync.
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==
 
@@ -25,8 +25,8 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
-plugin_info.buildName = 'jonatkins';
-plugin_info.dateTimeVersion = '20150917.154202';
+plugin_info.buildName = 'iitc';
+plugin_info.dateTimeVersion = '20161002.182710';
 plugin_info.pluginId = 'bookmarks-by-zaso';
 //END PLUGIN AUTHORS NOTE
 
@@ -61,6 +61,8 @@ plugin_info.pluginId = 'bookmarks-by-zaso';
   window.plugin.bookmarks.updateQueue = {};
   window.plugin.bookmarks.updatingQueue = {};
 
+  window.plugin.bookmarks.IDcount = 0;
+
   window.plugin.bookmarks.enableSync = false;
 
   window.plugin.bookmarks.starLayers = {};
@@ -79,7 +81,8 @@ plugin_info.pluginId = 'bookmarks-by-zaso';
   // Generate an ID for the bookmark (date time + random number)
   window.plugin.bookmarks.generateID = function() {
     var d = new Date();
-    var ID = d.getTime()+(Math.floor(Math.random()*99)+1);
+    var ID = d.getTime().toString() + window.plugin.bookmarks.IDcount.toString() + (Math.floor(Math.random()*99)+1);
+    window.plugin.bookmarks.IDcount++;
     var ID = 'id'+ID.toString();
     return ID;
   }
@@ -906,7 +909,7 @@ plugin_info.pluginId = 'bookmarks-by-zaso';
   }
 
   window.plugin.bookmarks.dialogLoadList = function() {
-    var r = 'The "<a href="http://iitc.jonatkins.com/?page=desktop#plugin-draw-tools" target="_BLANK"><strong>Draw Tools</strong></a>" plugin is required.</span>';
+    var r = 'The "<a href="http://iitc.me/desktop/#plugin-draw-tools" target="_BLANK"><strong>Draw Tools</strong></a>" plugin is required.</span>';
 
     if(!window.plugin.bookmarks || !window.plugin.drawTools) {
       $('.ui-dialog-autodrawer .ui-dialog-buttonset .ui-button:not(:first)').hide();

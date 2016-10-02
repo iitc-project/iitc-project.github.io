@@ -2,19 +2,19 @@
 // @id             iitc-digital-bumper-sticker
 // @name           IITC Digital Bumper Sticker
 // @category       Stock
-// @version        0.1.1.20150917.154202
+// @version        0.1.1.20161002.182710
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://secure.jonatkins.com/iitc/release/plugins/iitc-ditigal-bumper-sticker.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/release/plugins/iitc-ditigal-bumper-sticker.user.js
-// @description    [jonatkins-2015-09-17-154202] Adds a "I'd rather be using IITC" logo to the standard intel map.
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
-// @include        https://www.ingress.com/mission/*
-// @include        http://www.ingress.com/mission/*
-// @match          https://www.ingress.com/mission/*
-// @match          http://www.ingress.com/mission/*
+// @updateURL      https://iitc.me/build/release/plugins/iitc-ditigal-bumper-sticker.meta.js
+// @downloadURL    https://iitc.me/build/release/plugins/iitc-ditigal-bumper-sticker.user.js
+// @description    [iitc-2016-10-02-182710] Adds a "I'd rather be using IITC" logo to the standard intel map.
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==
 
@@ -25,7 +25,7 @@ if (targetContainer) {
   logoDiv.setAttribute('style', "position: fixed; left: 20px; top: 130px; z-index: auto; pointer-events: none;");
 
   var img = document.createElement('img');
-  img.setAttribute('src', 'http://iitc.jonatkins.com/assets/img/prefer-iitc-200.png');
+  img.setAttribute('src', 'http://iitc.me/assets/img/prefer-iitc-200.png');
 
   logoDiv.appendChild(img);
 
