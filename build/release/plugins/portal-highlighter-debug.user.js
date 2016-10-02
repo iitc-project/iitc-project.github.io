@@ -2,11 +2,11 @@
 // @id             iitc-plugin-highlight-portals-debug
 // @name           IITC plugin: Debug: Highlighers
 // @category       Debug
-// @version        0.1.0.20161002.191120
+// @version        0.1.0.20161002.202701
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/release/plugins/portal-highlighter-debug.meta.js
-// @downloadURL    https://iitc.me/build/release/plugins/portal-highlighter-debug.user.js
-// @description    [iitc-2016-10-02-191120] Various debug and/or temporary highlighters. Will change over time as needed.
+// @updateURL      https://static.iitc.me/build/release/plugins/portal-highlighter-debug.meta.js
+// @downloadURL    https://static.iitc.me/build/release/plugins/portal-highlighter-debug.user.js
+// @description    [iitc-2016-10-02-202701] Various debug and/or temporary highlighters. Will change over time as needed.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -26,7 +26,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc';
-plugin_info.dateTimeVersion = '20161002.191120';
+plugin_info.dateTimeVersion = '20161002.202701';
 plugin_info.pluginId = 'portal-highlighter-debug';
 //END PLUGIN AUTHORS NOTE
 

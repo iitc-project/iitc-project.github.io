@@ -2,10 +2,10 @@
 // @id             iitc-plugin-highlight-portals-upgrade@vita10gy
 // @name           IITC plugin: highlight portals you can upgrade
 // @category  Deleted
-// @version        0.2.0.20161002.191120
+// @version        0.2.0.20161002.202701
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/release/plugins/portal-highlighter-portals-upgrade.meta.js
-// @downloadURL    https://iitc.me/build/release/plugins/portal-highlighter-portals-upgrade.user.js
+// @updateURL      https://static.iitc.me/build/release/plugins/portal-highlighter-portals-upgrade.meta.js
+// @downloadURL    https://static.iitc.me/build/release/plugins/portal-highlighter-portals-upgrade.user.js
 // @description    This plugin is no longer available, as Niantic optimisations have removed the data it needed.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*

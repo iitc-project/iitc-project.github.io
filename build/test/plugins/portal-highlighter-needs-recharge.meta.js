@@ -2,11 +2,11 @@
 // @id             iitc-plugin-highlight-needs-recharge@vita10gy
 // @name           IITC plugin: hightlight portals that need recharging
 // @category       Highlighter
-// @version        0.1.2.20161002.200117
+// @version        0.1.2.20161002.202708
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/test/plugins/portal-highlighter-needs-recharge.meta.js
-// @downloadURL    https://iitc.me/build/test/plugins/portal-highlighter-needs-recharge.user.js
-// @description    [iitc-test-2016-10-02-200117] Use the portal fill color to denote if the portal needs recharging and how much. Yellow: above 85%. Orange: above 50%. Red: above 15%. Magenta: below 15%.
+// @updateURL      https://static.iitc.me/build/test/plugins/portal-highlighter-needs-recharge.meta.js
+// @downloadURL    https://static.iitc.me/build/test/plugins/portal-highlighter-needs-recharge.user.js
+// @description    [iitc-test-2016-10-02-202708] Use the portal fill color to denote if the portal needs recharging and how much. Yellow: above 85%. Orange: above 50%. Red: above 15%. Magenta: below 15%.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

@@ -2,10 +2,10 @@
 // @id             iitc-plugin-players-resonators@rbino
 // @name           IITC plugin: Player's Resonators
 // @category       Deleted
-// @version        0.1.5.20161002.191120
+// @version        0.1.5.20161002.202701
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/release/plugins/players-resonators.meta.js
-// @downloadURL    https://iitc.me/build/release/plugins/players-resonators.user.js
+// @updateURL      https://static.iitc.me/build/release/plugins/players-resonators.meta.js
+// @downloadURL    https://static.iitc.me/build/release/plugins/players-resonators.user.js
 // @description    The data this plugin needs is no longer available since the late November 2013 intel site update.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*

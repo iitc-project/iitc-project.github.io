@@ -2,10 +2,10 @@
 // @id             iitc-plugin-defense@gluckies
 // @name           IITC plugin: portal defense 
 // @category       Deleted
-// @version        0.2.2.20161002.191120
+// @version        0.2.2.20161002.202701
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/release/plugins/portal-defense.meta.js
-// @downloadURL    https://iitc.me/build/release/plugins/portal-defense.user.js
+// @updateURL      https://static.iitc.me/build/release/plugins/portal-defense.meta.js
+// @downloadURL    https://static.iitc.me/build/release/plugins/portal-defense.user.js
 // @description    The data this plugin needs is no longer available since the late November 2013 intel site update.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*

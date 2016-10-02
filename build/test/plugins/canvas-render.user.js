@@ -2,11 +2,11 @@
 // @id             iitc-plugin-canvas-render@jonatkins
 // @name           IITC plugin: Use Canvas rendering
 // @category       Tweaks
-// @version        0.1.0.20161002.200117
+// @version        0.1.0.20161002.202708
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/test/plugins/canvas-render.meta.js
-// @downloadURL    https://iitc.me/build/test/plugins/canvas-render.user.js
-// @description    [iitc-test-2016-10-02-200117] EXPERIMENTAL: use canvas-based rendering. Can be faster when viewing dense areas. Limited testing of the feature so far
+// @updateURL      https://static.iitc.me/build/test/plugins/canvas-render.meta.js
+// @downloadURL    https://static.iitc.me/build/test/plugins/canvas-render.user.js
+// @description    [iitc-test-2016-10-02-202708] EXPERIMENTAL: use canvas-based rendering. Can be faster when viewing dense areas. Limited testing of the feature so far
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -32,7 +32,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc-test';
-plugin_info.dateTimeVersion = '20161002.200117';
+plugin_info.dateTimeVersion = '20161002.202708';
 plugin_info.pluginId = 'canvas-render';
 //END PLUGIN AUTHORS NOTE
 

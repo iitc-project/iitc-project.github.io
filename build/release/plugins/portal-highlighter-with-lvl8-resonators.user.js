@@ -2,10 +2,10 @@
 // @id             iitc-plugin-highlight-portals-with-L8-resonators@superd
 // @name           IITC plugin: highlight portals with L8 resonators
 // @category  Deleted
-// @version        0.1.0.20161002.191120
+// @version        0.1.0.20161002.202701
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/release/plugins/portal-highlighter-with-lvl8-resonators.meta.js
-// @downloadURL    https://iitc.me/build/release/plugins/portal-highlighter-with-lvl8-resonators.user.js
+// @updateURL      https://static.iitc.me/build/release/plugins/portal-highlighter-with-lvl8-resonators.meta.js
+// @downloadURL    https://static.iitc.me/build/release/plugins/portal-highlighter-with-lvl8-resonators.user.js
 // @description    This plugin is no longer available, as Niantic optimisations have removed the data it needed.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*

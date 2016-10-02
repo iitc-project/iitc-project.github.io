@@ -2,11 +2,11 @@
 // @id             iitc-plugin-basemap-stamen@jonatkins
 // @name           IITC plugin: Map layers from stamen.com
 // @category       Map Tiles
-// @version        0.2.0.20161002.191120
+// @version        0.2.0.20161002.202701
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/release/plugins/basemap-stamen.meta.js
-// @downloadURL    https://iitc.me/build/release/plugins/basemap-stamen.user.js
-// @description    [iitc-2016-10-02-191120] Add the 'Toner' and 'Watercolor' map layers from maps.stamen.com.
+// @updateURL      https://static.iitc.me/build/release/plugins/basemap-stamen.meta.js
+// @downloadURL    https://static.iitc.me/build/release/plugins/basemap-stamen.user.js
+// @description    [iitc-2016-10-02-202701] Add the 'Toner' and 'Watercolor' map layers from maps.stamen.com.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

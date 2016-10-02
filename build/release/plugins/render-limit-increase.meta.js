@@ -2,11 +2,11 @@
 // @id             iitc-plugin-render-limit-increase@jonatkins
 // @name           IITC plugin: render limit increase
 // @category       Deleted
-// @version        0.4.0.20161002.191120
+// @version        0.4.0.20161002.202701
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/release/plugins/render-limit-increase.meta.js
-// @downloadURL    https://iitc.me/build/release/plugins/render-limit-increase.user.js
-// @description    [iitc-2016-10-02-191120] IITC no longer has simple render limits that can be adjusted - many more portals are now displayed without any increases required.
+// @updateURL      https://static.iitc.me/build/release/plugins/render-limit-increase.meta.js
+// @downloadURL    https://static.iitc.me/build/release/plugins/render-limit-increase.user.js
+// @description    [iitc-2016-10-02-202701] IITC no longer has simple render limits that can be adjusted - many more portals are now displayed without any increases required.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

@@ -2,11 +2,11 @@
 // @id             iitc-plugin-bookmarks@ZasoGD
 // @name           IITC plugin: Bookmarks for maps and portals
 // @category       Controls
-// @version        0.2.12.20161002.191120
+// @version        0.2.12.20161002.202701
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/release/plugins/bookmarks-by-zaso.meta.js
-// @downloadURL    https://iitc.me/build/release/plugins/bookmarks-by-zaso.user.js
-// @description    [iitc-2016-10-02-191120] Save your favorite Maps and Portals and move the intel map with a click. Works with sync.
+// @updateURL      https://static.iitc.me/build/release/plugins/bookmarks-by-zaso.meta.js
+// @downloadURL    https://static.iitc.me/build/release/plugins/bookmarks-by-zaso.user.js
+// @description    [iitc-2016-10-02-202701] Save your favorite Maps and Portals and move the intel map with a click. Works with sync.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

@@ -2,10 +2,10 @@
 // @id             iitc-plugin-highlight-mitigation@jonatkins
 // @name           IITC plugin: hightlight portals total mitigation
 // @category  Deleted
-// @version        0.1.1.20161002.200117
+// @version        0.1.1.20161002.202708
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/test/plugins/portal-highlighter-mitigation.meta.js
-// @downloadURL    https://iitc.me/build/test/plugins/portal-highlighter-mitigation.user.js
+// @updateURL      https://static.iitc.me/build/test/plugins/portal-highlighter-mitigation.meta.js
+// @downloadURL    https://static.iitc.me/build/test/plugins/portal-highlighter-mitigation.user.js
 // @description    This plugin is no longer available, as Niantic optimisations have removed the data it needed.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*

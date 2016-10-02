@@ -2,11 +2,11 @@
 // @id             iitc-plugin-keys-on-map@xelio
 // @name           IITC plugin: Keys on map
 // @category       Keys
-// @version        0.2.1.20161002.200117
+// @version        0.2.1.20161002.202708
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/test/plugins/keys-on-map.meta.js
-// @downloadURL    https://iitc.me/build/test/plugins/keys-on-map.user.js
-// @description    [iitc-test-2016-10-02-200117] Show the manually entered key counts from the 'keys' plugin on the map.
+// @updateURL      https://static.iitc.me/build/test/plugins/keys-on-map.meta.js
+// @downloadURL    https://static.iitc.me/build/test/plugins/keys-on-map.user.js
+// @description    [iitc-test-2016-10-02-202708] Show the manually entered key counts from the 'keys' plugin on the map.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -26,7 +26,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc-test';
-plugin_info.dateTimeVersion = '20161002.200117';
+plugin_info.dateTimeVersion = '20161002.202708';
 plugin_info.pluginId = 'keys-on-map';
 //END PLUGIN AUTHORS NOTE
 

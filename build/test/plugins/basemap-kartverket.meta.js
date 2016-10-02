@@ -2,11 +2,11 @@
 // @id             iitc-plugin-basemap-kartverket@sollie
 // @name           IITC plugin: Kartverket.no map tiles
 // @category       Map Tiles
-// @version        0.1.0.20161002.200117
+// @version        0.1.0.20161002.202708
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/test/plugins/basemap-kartverket.meta.js
-// @downloadURL    https://iitc.me/build/test/plugins/basemap-kartverket.user.js
-// @description    [iitc-test-2016-10-02-200117] Add the color and grayscale map tiles from Kartverket.no as an optional layer.
+// @updateURL      https://static.iitc.me/build/test/plugins/basemap-kartverket.meta.js
+// @downloadURL    https://static.iitc.me/build/test/plugins/basemap-kartverket.user.js
+// @description    [iitc-test-2016-10-02-202708] Add the color and grayscale map tiles from Kartverket.no as an optional layer.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

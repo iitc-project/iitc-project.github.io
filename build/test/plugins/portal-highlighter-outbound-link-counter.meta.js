@@ -2,10 +2,10 @@
 // @id             iitc-plugin-highlight-outbound-link-counter@cathesaurus
 // @name           IITC plugin: highlight portals running low on outbound links
 // @category  Deleted
-// @version        0.1.0.20161002.200117
+// @version        0.1.0.20161002.202708
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/test/plugins/portal-highlighter-outbound-link-counter.meta.js
-// @downloadURL    https://iitc.me/build/test/plugins/portal-highlighter-outbound-link-counter.user.js
+// @updateURL      https://static.iitc.me/build/test/plugins/portal-highlighter-outbound-link-counter.meta.js
+// @downloadURL    https://static.iitc.me/build/test/plugins/portal-highlighter-outbound-link-counter.user.js
 // @description   PLUGIN CURRENTLY UNAVAILABLE
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*

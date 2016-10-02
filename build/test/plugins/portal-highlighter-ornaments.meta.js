@@ -2,11 +2,11 @@
 // @id             iitc-plugin-highlight-ornaments@jonatkins
 // @name           IITC plugin: hightlight portals with ornaments
 // @category       Highlighter
-// @version        0.0.1.20161002.200117
+// @version        0.0.1.20161002.202708
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/test/plugins/portal-highlighter-ornaments.meta.js
-// @downloadURL    https://iitc.me/build/test/plugins/portal-highlighter-ornaments.user.js
-// @description    [iitc-test-2016-10-02-200117] Use the portal fill color to denote portals with additional 'ornament' markers. e.g. Anomaly portals
+// @updateURL      https://static.iitc.me/build/test/plugins/portal-highlighter-ornaments.meta.js
+// @downloadURL    https://static.iitc.me/build/test/plugins/portal-highlighter-ornaments.user.js
+// @description    [iitc-test-2016-10-02-202708] Use the portal fill color to denote portals with additional 'ornament' markers. e.g. Anomaly portals
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

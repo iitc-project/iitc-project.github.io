@@ -2,11 +2,11 @@
 // @id             iitc-plugin-reso-energy-pct-in-portal-detail@xelio
 // @name           IITC plugin: reso energy pct in portal detail
 // @category       Portal Info
-// @version        0.1.2.20161002.200117
+// @version        0.1.2.20161002.202708
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/test/plugins/reso-energy-pct-in-portal-detail.meta.js
-// @downloadURL    https://iitc.me/build/test/plugins/reso-energy-pct-in-portal-detail.user.js
-// @description    [iitc-test-2016-10-02-200117] Show resonator energy percentage on resonator energy bar in portal detail panel.
+// @updateURL      https://static.iitc.me/build/test/plugins/reso-energy-pct-in-portal-detail.meta.js
+// @downloadURL    https://static.iitc.me/build/test/plugins/reso-energy-pct-in-portal-detail.user.js
+// @description    [iitc-test-2016-10-02-202708] Show resonator energy percentage on resonator energy bar in portal detail panel.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -26,7 +26,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc-test';
-plugin_info.dateTimeVersion = '20161002.200117';
+plugin_info.dateTimeVersion = '20161002.202708';
 plugin_info.pluginId = 'reso-energy-pct-in-portal-detail';
 //END PLUGIN AUTHORS NOTE
 

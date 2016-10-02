@@ -2,10 +2,10 @@
 // @id             iitc-plugin-periodic-refresh
 // @name           IITC plugin: Periodic refresh
 // @category       Tweaks
-// @version        0.1.0.20161002.191120
+// @version        0.1.0.20161002.202701
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/release/plugins/periodic-refresh.meta.js
-// @downloadURL    https://iitc.me/build/release/plugins/periodic-refresh.user.js
+// @updateURL      https://static.iitc.me/build/release/plugins/periodic-refresh.meta.js
+// @downloadURL    https://static.iitc.me/build/release/plugins/periodic-refresh.user.js
 // @description    For use for unattended display screens only, this plugin causes idle mode to be left once per hour.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*

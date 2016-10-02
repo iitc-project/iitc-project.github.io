@@ -2,11 +2,11 @@
 // @id             iitc-plugin-update-check@jonatkins
 // @name           IITC plugin: Check for updates
 // @category       Misc
-// @version        0.1.1.20161002.191120
+// @version        0.1.1.20161002.202701
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://iitc.me/build/release/plugins/update-check.meta.js
-// @downloadURL    https://iitc.me/build/release/plugins/update-check.user.js
-// @description    [iitc-2016-10-02-191120] **WORK IN PROGRESS** Check for updates for IITC and plugins against http://iitc.jonatkins.com/. Can also report status messages for known IITC issues.
+// @updateURL      https://static.iitc.me/build/release/plugins/update-check.meta.js
+// @downloadURL    https://static.iitc.me/build/release/plugins/update-check.user.js
+// @description    [iitc-2016-10-02-202701] **WORK IN PROGRESS** Check for updates for IITC and plugins against http://iitc.jonatkins.com/. Can also report status messages for known IITC issues.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
