@@ -2,11 +2,11 @@
 // @id             iitc-plugin-link-show-direction
 // @name           IITC plugin: Show the direction of links on the map
 // @category       Tweaks
-// @version        0.2.1.20161002.182714
+// @version        0.2.1.20161002.200117
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://iitc.me/build/test/plugins/link-show-direction.meta.js
 // @downloadURL    https://iitc.me/build/test/plugins/link-show-direction.user.js
-// @description    [iitc-test-2016-10-02-182714] Show the direction of links on the map by adding short dashes to the line at the origin portal.
+// @description    [iitc-test-2016-10-02-200117] Show the direction of links on the map by adding short dashes to the line at the origin portal.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

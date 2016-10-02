@@ -2,11 +2,11 @@
 // @id             iitc-plugin-basemap-gmaps-gray@jacob1123
 // @name           IITC plugin: Gray Google Roads
 // @category       Map Tiles
-// @version        0.1.2.20161002.182714
+// @version        0.1.2.20161002.200117
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://iitc.me/build/test/plugins/basemap-gmaps-gray.meta.js
 // @downloadURL    https://iitc.me/build/test/plugins/basemap-gmaps-gray.user.js
-// @description    [iitc-test-2016-10-02-182714] Add a simplified gray Version of Google map tiles as an optional layer.
+// @description    [iitc-test-2016-10-02-200117] Add a simplified gray Version of Google map tiles as an optional layer.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

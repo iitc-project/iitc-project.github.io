@@ -2,11 +2,11 @@
 // @id             iitc-plugin-highlight-ornaments@jonatkins
 // @name           IITC plugin: hightlight portals with ornaments
 // @category       Highlighter
-// @version        0.0.1.20161002.182714
+// @version        0.0.1.20161002.200117
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://iitc.me/build/test/plugins/portal-highlighter-ornaments.meta.js
 // @downloadURL    https://iitc.me/build/test/plugins/portal-highlighter-ornaments.user.js
-// @description    [iitc-test-2016-10-02-182714] Use the portal fill color to denote portals with additional 'ornament' markers. e.g. Anomaly portals
+// @description    [iitc-test-2016-10-02-200117] Use the portal fill color to denote portals with additional 'ornament' markers. e.g. Anomaly portals
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -26,7 +26,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc-test';
-plugin_info.dateTimeVersion = '20161002.182714';
+plugin_info.dateTimeVersion = '20161002.200117';
 plugin_info.pluginId = 'portal-highlighter-ornaments';
 //END PLUGIN AUTHORS NOTE
 
