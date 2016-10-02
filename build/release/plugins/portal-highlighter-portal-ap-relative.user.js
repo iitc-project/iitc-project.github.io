@@ -2,7 +2,7 @@
 // @id             iitc-plugin-highlight-portals-by-ap-relative@vita10gy
 // @name           IITC plugin: highlight portals by ap relative
 // @category  Deleted
-// @version        0.1.1.20161002.182710
+// @version        0.1.1.20161002.191120
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://iitc.me/build/release/plugins/portal-highlighter-portal-ap-relative.meta.js
 // @downloadURL    https://iitc.me/build/release/plugins/portal-highlighter-portal-ap-relative.user.js

@@ -2,11 +2,11 @@
 // @id             iitc-plugin-distance-to-portal@jonatkins
 // @name           IITC plugin: Distance to portal
 // @category       Portal Info
-// @version        0.1.1.20161002.182710
+// @version        0.1.1.20161002.191120
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://iitc.me/build/release/plugins/distance-to-portal.meta.js
 // @downloadURL    https://iitc.me/build/release/plugins/distance-to-portal.user.js
-// @description    [iitc-2016-10-02-182710] Allows your current location to be set manually, then shows the distance to the selected portal. Useful when managing portal keys.
+// @description    [iitc-2016-10-02-191120] Allows your current location to be set manually, then shows the distance to the selected portal. Useful when managing portal keys.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

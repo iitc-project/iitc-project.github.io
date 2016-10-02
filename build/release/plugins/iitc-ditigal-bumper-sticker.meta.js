@@ -2,11 +2,11 @@
 // @id             iitc-digital-bumper-sticker
 // @name           IITC Digital Bumper Sticker
 // @category       Stock
-// @version        0.1.1.20161002.182710
+// @version        0.1.1.20161002.191120
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://iitc.me/build/release/plugins/iitc-ditigal-bumper-sticker.meta.js
 // @downloadURL    https://iitc.me/build/release/plugins/iitc-ditigal-bumper-sticker.user.js
-// @description    [iitc-2016-10-02-182710] Adds a "I'd rather be using IITC" logo to the standard intel map.
+// @description    [iitc-2016-10-02-191120] Adds a "I'd rather be using IITC" logo to the standard intel map.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

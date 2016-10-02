@@ -2,11 +2,11 @@
 // @id             iitc-plugin-ipas-link@graphracer
 // @name           IITC Plugin: simulate an attack on portal
 // @category       Deleted
-// @version        0.3.0.20161002.182710
+// @version        0.3.0.20161002.191120
 // @namespace      https://github.com/xosofox/IPAS
 // @updateURL      https://iitc.me/build/release/plugins/ipas-link.meta.js
 // @downloadURL    https://iitc.me/build/release/plugins/ipas-link.user.js
-// @description    [iitc-2016-10-02-182710] No longer available, as the resonator slot number and deployment distance is no longer available
+// @description    [iitc-2016-10-02-191120] No longer available, as the resonator slot number and deployment distance is no longer available
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

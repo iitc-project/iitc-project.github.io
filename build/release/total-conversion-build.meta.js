@@ -1,11 +1,11 @@
 // ==UserScript==
 // @id             ingress-intel-total-conversion@jonatkins
 // @name           IITC: Ingress intel map total conversion
-// @version        0.25.2.20161002.182710
+// @version        0.25.0.20161002.191120
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://iitc.me/build/release/total-conversion-build.meta.js
 // @downloadURL    https://iitc.me/build/release/total-conversion-build.user.js
-// @description    [iitc-2016-10-02-182710] Total conversion for the ingress intel map.
+// @description    [iitc-2016-10-02-191120] Total conversion for the ingress intel map.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

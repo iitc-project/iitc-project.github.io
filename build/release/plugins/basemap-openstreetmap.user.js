@@ -2,11 +2,11 @@
 // @id             iitc-plugin-basemap-openstreetpam@jonatkins
 // @name           IITC plugin: OpenStreetMap.org map tiles
 // @category       Map Tiles
-// @version        0.1.1.20161002.182710
+// @version        0.1.1.20161002.191120
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://iitc.me/build/release/plugins/basemap-openstreetmap.meta.js
 // @downloadURL    https://iitc.me/build/release/plugins/basemap-openstreetmap.user.js
-// @description    [iitc-2016-10-02-182710] Add the native OpenStreetMap.org map tiles as an optional layer.
+// @description    [iitc-2016-10-02-191120] Add the native OpenStreetMap.org map tiles as an optional layer.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -26,7 +26,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc';
-plugin_info.dateTimeVersion = '20161002.182710';
+plugin_info.dateTimeVersion = '20161002.191120';
 plugin_info.pluginId = 'basemap-openstreetmap';
 //END PLUGIN AUTHORS NOTE
 
@@ -36,27 +36,18 @@ plugin_info.pluginId = 'basemap-openstreetmap';
 
 
 // use own namespace for plugin
-window.plugin.mapTileOpenStreetMap = {
-  addLayer: function() {
-    // OpenStreetMap tiles - we shouldn't use these by default - https://wiki.openstreetmap.org/wiki/Tile_usage_policy
-    // "Heavy use (e.g. distributing an app that uses tiles from openstreetmap.org) is forbidden without prior permission from the System Administrators"
+window.plugin.mapTileOpenStreetMap = function() {};
 
-    var osmOpt = {
-      attribution: 'Map data © OpenStreetMap contributors',
-      maxNativeZoom: 18,
-      maxZoom: 21,
-    };
+window.plugin.mapTileOpenStreetMap.addLayer = function() {
 
-    var layers = {
-      'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png': 'OpenStreetMap',
-      'http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png': 'Humanitarian',
-    };
+  //OpenStreetMap tiles - we shouldn't use these by default - https://wiki.openstreetmap.org/wiki/Tile_usage_policy
+  // "Heavy use (e.g. distributing an app that uses tiles from openstreetmap.org) is forbidden without prior permission from the System Administrators"
 
-    for(var url in layers) {
-      var layer = new L.TileLayer(url, osmOpt);
-      layerChooser.addBaseLayer(layer, layers[url]);
-    }
-  },
+  osmAttribution = 'Map data © OpenStreetMap contributors';
+  var osmOpt = {attribution: osmAttribution, maxNativeZoom: 18, maxZoom: 21};
+  var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', osmOpt);
+
+  layerChooser.addBaseLayer(osm, "OpenStreetMap");
 };
 
 var setup =  window.plugin.mapTileOpenStreetMap.addLayer;

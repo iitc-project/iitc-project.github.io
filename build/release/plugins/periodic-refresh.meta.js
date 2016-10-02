@@ -2,7 +2,7 @@
 // @id             iitc-plugin-periodic-refresh
 // @name           IITC plugin: Periodic refresh
 // @category       Tweaks
-// @version        0.1.0.20161002.182710
+// @version        0.1.0.20161002.191120
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://iitc.me/build/release/plugins/periodic-refresh.meta.js
 // @downloadURL    https://iitc.me/build/release/plugins/periodic-refresh.user.js

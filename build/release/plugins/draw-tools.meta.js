@@ -2,11 +2,11 @@
 // @id             iitc-plugin-draw-tools@breunigs
 // @name           IITC plugin: draw tools
 // @category       Layer
-// @version        0.7.0.20161002.182710
+// @version        0.7.0.20161002.191120
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://iitc.me/build/release/plugins/draw-tools.meta.js
 // @downloadURL    https://iitc.me/build/release/plugins/draw-tools.user.js
-// @description    [iitc-2016-10-02-182710] Allow drawing things onto the current map so you may plan your next move.
+// @description    [iitc-2016-10-02-191120] Allow drawing things onto the current map so you may plan your next move.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

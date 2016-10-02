@@ -2,11 +2,11 @@
 // @id             iitc-plugin-basemap-yandex@jonatkins
 // @name           IITC plugin: Yandex maps
 // @category       Map Tiles
-// @version        0.2.0.20161002.182710
+// @version        0.2.0.20161002.191120
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://iitc.me/build/release/plugins/basemap-yandex.meta.js
 // @downloadURL    https://iitc.me/build/release/plugins/basemap-yandex.user.js
-// @description    [iitc-2016-10-02-182710] Add Yandex.com (Russian/Русский) map layers
+// @description    [iitc-2016-10-02-191120] Add Yandex.com (Russian/Русский) map layers
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

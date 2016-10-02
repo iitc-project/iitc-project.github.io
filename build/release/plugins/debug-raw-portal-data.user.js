@@ -2,11 +2,11 @@
 // @id             iitc-plugin-raw-portal-data
 // @name           IITC plugin: Debug: Raw portal JSON data
 // @category       Debug
-// @version        0.2.4.20161002.182710
+// @version        0.2.4.20161002.191120
 // @namespace      rawdata
 // @updateURL      https://iitc.me/build/release/plugins/debug-raw-portal-data.meta.js
 // @downloadURL    https://iitc.me/build/release/plugins/debug-raw-portal-data.user.js
-// @description    [iitc-2016-10-02-182710] Developer debugging aid: Add a link to the portal details to show the raw data of a portal.
+// @description    [iitc-2016-10-02-191120] Developer debugging aid: Add a link to the portal details to show the raw data of a portal.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -26,7 +26,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc';
-plugin_info.dateTimeVersion = '20161002.182710';
+plugin_info.dateTimeVersion = '20161002.191120';
 plugin_info.pluginId = 'debug-raw-portal-data';
 //END PLUGIN AUTHORS NOTE
 

@@ -2,11 +2,11 @@
 // @id             layer-count@fkloft
 // @name           IITC plugin: layer count
 // @category       Info
-// @version        0.1.0.20161002.182710
+// @version        0.1.0.20161002.191120
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://iitc.me/build/release/plugins/layer-count.meta.js
 // @downloadURL    https://iitc.me/build/release/plugins/layer-count.user.js
-// @description    [iitc-2016-10-02-182710] Allow users to count nested fields
+// @description    [iitc-2016-10-02-191120] Allow users to count nested fields
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -26,7 +26,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc';
-plugin_info.dateTimeVersion = '20161002.182710';
+plugin_info.dateTimeVersion = '20161002.191120';
 plugin_info.pluginId = 'layer-count';
 //END PLUGIN AUTHORS NOTE
 
@@ -43,31 +43,9 @@ plugin.layerCount.onBtnClick = function(ev) {
 		layer = plugin.layerCount.layer;
 
 	if(btn.classList.contains("active")) {
-		if(window.plugin.drawTools !== undefined) {
-			window.plugin.drawTools.drawnItems.eachLayer(function(layer) {
-				if (layer instanceof L.GeodesicPolygon) {
-					L.DomUtil.addClass(layer._path, "leaflet-clickable");
-					layer._path.setAttribute("pointer-events", layer.options.pointerEventsBackup);
-					layer.options.pointerEvents = layer.options.pointerEventsBackup;
-					layer.options.clickable = true;
-				}
-			});
-		}
 		map.off("click", plugin.layerCount.calculate);
 		btn.classList.remove("active");
 	} else {
-		console.log("inactive");
-		if(window.plugin.drawTools !== undefined) {
-			window.plugin.drawTools.drawnItems.eachLayer(function(layer) {
-				if (layer instanceof L.GeodesicPolygon) {
-					layer.options.pointerEventsBackup = layer.options.pointerEvents;
-					layer.options.pointerEvents = null;
-					layer.options.clickable = false;
-					L.DomUtil.removeClass(layer._path, "leaflet-clickable");
-					layer._path.setAttribute("pointer-events", "none");
-				}
-			});
-		}
 		map.on("click", plugin.layerCount.calculate);
 		btn.classList.add("active");
 		setTimeout(function(){
@@ -118,26 +96,18 @@ plugin.layerCount.pnpoly = function(latlngs, point) {
 plugin.layerCount.calculate = function(ev) {
 	var point = ev.latlng;
 	var fields = window.fields;
-	var layersRes = layersEnl = layersDrawn = 0;
+	var layersRes = layersEnl = 0;
 
 	for(var guid in fields) {
 		var field = fields[guid];
 
-		// we don't need to check the field's bounds first. pnpoly is pretty simple math.
-		// Checking the bounds is about 50 times slower than just using pnpoly
+		// we don't need to check the field's bounds first. pnpoly is pretty simple math. the bounds is about 50 times
+		// slower than just using pnpoly
 		if(plugin.layerCount.pnpoly(field._latlngs, point)) {
 			if(field.options.team == TEAM_ENL)
 				layersEnl++;
 			else if(field.options.team == TEAM_RES)
 				layersRes++;
-		}
-	}
-
-	if (window.plugin.drawTools) {
-		for(var layerId in window.plugin.drawTools.drawnItems._layers) {
-			var field = window.plugin.drawTools.drawnItems._layers[layerId];
-			if(field instanceof L.GeodesicPolygon && plugin.layerCount.pnpoly(field._latlngs, point)) 
-				layersDrawn++;
 		}
 	}
 
@@ -149,9 +119,6 @@ plugin.layerCount.calculate = function(ev) {
 		var content = "Enl: " + layersEnl + " field(s)";
 	else
 		var content = "No fields";
-
-	if (layersDrawn != 0)
-		content += "; draw: " + layersDrawn + " polygon(s)";
 
 	plugin.layerCount.tooltip.innerHTML = content;
 

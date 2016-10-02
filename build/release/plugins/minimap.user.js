@@ -2,11 +2,11 @@
 // @id             iitc-plugin-minimap@breunigs
 // @name           IITC plugin: Mini map
 // @category       Controls
-// @version        0.2.0.20161002.182710
+// @version        0.1.0.20161002.191120
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://iitc.me/build/release/plugins/minimap.meta.js
 // @downloadURL    https://iitc.me/build/release/plugins/minimap.user.js
-// @description    [iitc-2016-10-02-182710] Show a mini map on the corner of the map.
+// @description    [iitc-2016-10-02-191120] Show a mini map on the corner of the map.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -26,7 +26,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc';
-plugin_info.dateTimeVersion = '20161002.182710';
+plugin_info.dateTimeVersion = '20161002.191120';
 plugin_info.pluginId = 'minimap';
 //END PLUGIN AUTHORS NOTE
 
@@ -288,17 +288,29 @@ L.control.minimap = function (options) {
   try { console.log('done loading leaflet.draw JS'); } catch(e) {}
 
   // we can't use the same TileLayer as the main map uses - it causes issues.
-  // stick with the Google tiles for now
+  // stick with the MapQuest tiles for now
 
-  // desktop mode - bottom-left, so it doesn't clash with the sidebar
-  // mobile mode - bottom-right - so it floats above the map copyright text
-  var position = isSmartphone() ? 'bottomright' : 'bottomleft';
+  //OpenStreetMap attribution - required by several of the layers
+  osmAttribution = 'Map data © OpenStreetMap contributors';
+
+  //MapQuest offer tiles - http://developer.mapquest.com/web/products/open/map
+  //their usage policy has no limits (except required notification above 4000 tiles/sec - we're perhaps at 50 tiles/sec based on CloudMade stats)
+  var mqSubdomains = [ 'otile1','otile2', 'otile3', 'otile4' ];
+  var mqTileUrlPrefix = window.location.protocol !== 'https:' ? 'http://{s}.mqcdn.com' : 'https://{s}-s.mqcdn.com';
+  var mqMapOpt = {attribution: osmAttribution+', Tiles Courtesy of MapQuest', maxZoom: 18, subdomains: mqSubdomains};
+  var mqMap = new L.TileLayer(mqTileUrlPrefix+'/tiles/1.0.0/map/{z}/{x}/{y}.jpg',mqMapOpt);
 
   setTimeout(function() {
-    new L.Control.MiniMap(new L.Google('ROADMAP',{maxZoom:21}), {toggleDisplay: true, position: position}).addTo(window.map);
+    if(!isSmartphone()) {
+      // desktop mode - bottom-left, so it doesn't clash with the sidebar
+      new L.Control.MiniMap(mqMap, {toggleDisplay: true, position: 'bottomleft'}).addTo(window.map);
+    } else {
+      // mobile mode - bottom-right - so it floats above the map copyright text
+      new L.Control.MiniMap(mqMap, {toggleDisplay: true, position: 'bottomright'}).addTo(window.map);
+    }
   }, 0);
 
-  $('head').append('<style>.leaflet-control-minimap {\n    border:solid rgba(255, 255, 255, 0.7) 3px;\n    box-shadow: 0 1px 7px #999;\n    background: #f8f8f9;\n    -moz-border-radius: 8px;\n    -webkit-border-radius: 8px;\n    border-radius: 8px;\n}\n\n.leaflet-control-minimap a {\n    background-color: rgba(255, 255, 255, 0.75);\n    background-position: 1px 2px;\n    background-repeat: no-repeat;\n    display: block;\n    outline: none;\n    z-index: 99999;\n}\n\n.leaflet-control-minimap a.minimized {\n    background-position: 1px -18px;\n}\n\n.leaflet-control-minimap-toggle-display {\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAmCAYAAADJJcvsAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90BEAAINZFnlVUAAAGwSURBVEjH7dU/SyNBGAbwd11Zi8ueFhKyclbCSzgw+A+7A2fgipDmyvsA11grB4e9B8YvEPwYsgQhmbxidVi5IMSByHWzTBAOdquFZWwiHJKNu7HQIk858P4GhnlmAGaZKsYY2xizUGRmbtxiEATfut3uudb6Q8ZGC7mg4XB4OBgMvvq+fxmG4fIzZI2IznJBtVqNHMeBJEm2hRAXSqnlEbJKRBdSytVcULlc/lWv149d14UoiraEEJdKqV0i6kkp18bNzGcdXqVSOVJK/RNCnMRx/Nn3/T9pmhY77Kd4ntfknJNt2zAJeREyxpz2+/29l5CJkDGmSUQHUspc92g+A+FEtCGl7GTM3cxqO8u7jjWhIhYALI1qtAgANgB8BIAHy7L+5oJarZbJ8DUifmGMyULtf5YHROTjkCJQhIh1xtjtVO/RU2zbvqtWq3Lqh22ERGma7gghrpRSn6aCEPFno9HYLJVKwziO13u93nUYhtuFIEQ8Zow1Pc8bcM6/u66bRFFUabfbXa31Ti4IEX8zxo7++wQE5/yH4zgmSZL7IAjuXnV7tdb7nU5nZdbjN84jVmvCsn+YeNEAAAAASUVORK5CYII=);\n    border-radius: 4px 4px 4px 4px;\n    height: 19px;\n    width: 19px;\n    position: absolute;\n    bottom: 0;\n    right: 0; \n}\n.leaflet-left .leaflet-control-minimap-toggle-display {\n    left: 0;\n    right: auto;\n    transform: scaleX(-1);\n}\n.leaflet-top .leaflet-control-minimap-toggle-display {\n    bottom: auto;\n    top: 0;\n    transform: scaleY(-1);\n}\n.leaflet-top.leaflet-left .leaflet-control-minimap-toggle-display {\n    transform: scaleY(-1) scaleX(-1);\n}\n\n</style>');
+  $('head').append('<style>.leaflet-control-minimap {\n    border:solid rgba(255, 255, 255, 0.7) 3px;\n    box-shadow: 0 1px 7px #999;\n    background: #f8f8f9;\n    -moz-border-radius: 8px;\n    -webkit-border-radius: 8px;\n    border-radius: 8px;\n}\n\n.leaflet-control-minimap a {\n    background-color: rgba(255, 255, 255, 0.75);\n    background-position: 1px 2px;\n    background-repeat: no-repeat;\n    display: block;\n    outline: none;\n    z-index: 99999;\n}\n\n.leaflet-control-minimap a.minimized {\n    background-position: 1px -18px;\n}\n\n.leaflet-control-minimap-toggle-display {\n    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAmCAYAAADJJcvsAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90BEAAINZFnlVUAAAGwSURBVEjH7dU/SyNBGAbwd11Zi8ueFhKyclbCSzgw+A+7A2fgipDmyvsA11grB4e9B8YvEPwYsgQhmbxidVi5IMSByHWzTBAOdquFZWwiHJKNu7HQIk858P4GhnlmAGaZKsYY2xizUGRmbtxiEATfut3uudb6Q8ZGC7mg4XB4OBgMvvq+fxmG4fIzZI2IznJBtVqNHMeBJEm2hRAXSqnlEbJKRBdSytVcULlc/lWv149d14UoiraEEJdKqV0i6kkp18bNzGcdXqVSOVJK/RNCnMRx/Nn3/T9pmhY77Kd4ntfknJNt2zAJeREyxpz2+/29l5CJkDGmSUQHUspc92g+A+FEtCGl7GTM3cxqO8u7jjWhIhYALI1qtAgANgB8BIAHy7L+5oJarZbJ8DUifmGMyULtf5YHROTjkCJQhIh1xtjtVO/RU2zbvqtWq3Lqh22ERGma7gghrpRSn6aCEPFno9HYLJVKwziO13u93nUYhtuFIEQ8Zow1Pc8bcM6/u66bRFFUabfbXa31Ti4IEX8zxo7++wQE5/yH4zgmSZL7IAjuXnV7tdb7nU5nZdbjN84jVmvCsn+YeNEAAAAASUVORK5CYII=);\n    border-radius: 4px 4px 4px 4px;\n    height: 19px;\n    width: 19px;\n    position: absolute;\n    bottom: 0;\n    right: 0; \n}\n</style>');
 };
 
 var setup =  window.plugin.miniMap.setup;
