@@ -2,7 +2,7 @@
 // @id             iitc-plugin-highlight-portals-by-ap-by-energy-relative@vita10gy
 // @name           IITC plugin: highlight portals by ap/energy (relative)
 // @category  Deleted
-// @version        0.1.1.20161003.4044
+// @version        0.1.1.20161003.4825
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/test/plugins/portal-highlighter-portal-ap-energy-relative.meta.js
 // @downloadURL    https://static.iitc.me/build/test/plugins/portal-highlighter-portal-ap-energy-relative.user.js

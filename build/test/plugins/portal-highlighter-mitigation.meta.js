@@ -2,7 +2,7 @@
 // @id             iitc-plugin-highlight-mitigation@jonatkins
 // @name           IITC plugin: hightlight portals total mitigation
 // @category  Deleted
-// @version        0.1.1.20161003.4044
+// @version        0.1.1.20161003.4825
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/test/plugins/portal-highlighter-mitigation.meta.js
 // @downloadURL    https://static.iitc.me/build/test/plugins/portal-highlighter-mitigation.user.js

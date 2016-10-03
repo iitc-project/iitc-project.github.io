@@ -1,11 +1,11 @@
 // ==UserScript==
 // @id             ingress-intel-total-conversion@jonatkins
 // @name           IITC: Ingress intel map total conversion
-// @version        0.25.1.20161003.2636
+// @version        0.25.2.20161003.4740
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/release/total-conversion-build.meta.js
 // @downloadURL    https://static.iitc.me/build/release/total-conversion-build.user.js
-// @description    [iitc-2016-10-03-002636] Total conversion for the ingress intel map.
+// @description    [iitc-2016-10-03-004740] Total conversion for the ingress intel map.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -21,7 +21,7 @@
 // REPLACE ORIG SITE ///////////////////////////////////////////////////
 if(document.getElementsByTagName('html')[0].getAttribute('itemscope') != null)
   throw('Ingress Intel Website is down, not a userscript issue.');
-window.iitcBuildDate = '2016-10-03-002636';
+window.iitcBuildDate = '2016-10-03-004740';
 
 // disable vanilla JS
 window.onload = function() {};
@@ -1259,7 +1259,7 @@ function boot() {
   if(!isSmartphone()) // TODO remove completely?
     window.debug.console.overwriteNativeIfRequired();
 
-  console.log('loading done, booting. Built: 2016-10-03-002636');
+  console.log('loading done, booting. Built: 2016-10-03-004740');
   if(window.deviceID) console.log('Your device ID: ' + window.deviceID);
   window.runOnSmartphonesBeforeBoot();
 
@@ -17850,7 +17850,7 @@ L.Draggable.prototype._onDown = function(e) {
 
 // inject code into site context
 var script = document.createElement('script');
-var info = { buildName: 'iitc', dateTimeVersion: '20161003.2636' };
+var info = { buildName: 'iitc', dateTimeVersion: '20161003.4740' };
 if (this.GM_info && this.GM_info.script) info.script = { version: GM_info.script.version, name: GM_info.script.name, description: GM_info.script.description };
 script.appendChild(document.createTextNode('('+ wrapper +')('+JSON.stringify(info)+');'));
 (document.body || document.head || document.documentElement).appendChild(script);

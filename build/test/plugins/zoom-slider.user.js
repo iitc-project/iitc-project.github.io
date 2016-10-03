@@ -2,11 +2,11 @@
 // @id             iitc-plugin-zoom-slider@fragger
 // @name           IITC plugin: zoom slider
 // @category       Controls
-// @version        0.1.1.20161003.4044
+// @version        0.1.1.20161003.4825
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/test/plugins/zoom-slider.meta.js
 // @downloadURL    https://static.iitc.me/build/test/plugins/zoom-slider.user.js
-// @description    [iitc-test-2016-10-03-004044] Show a zoom slider on the map instead of the zoom buttons.
+// @description    [iitc-test-2016-10-03-004825] Show a zoom slider on the map instead of the zoom buttons.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -26,7 +26,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc-test';
-plugin_info.dateTimeVersion = '20161003.4044';
+plugin_info.dateTimeVersion = '20161003.4825';
 plugin_info.pluginId = 'zoom-slider';
 //END PLUGIN AUTHORS NOTE
 

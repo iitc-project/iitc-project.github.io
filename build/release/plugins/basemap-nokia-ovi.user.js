@@ -2,11 +2,11 @@
 // @id             iitc-plugin-nokia-ovi-maps
 // @name           IITC plugin: Nokia OVI maps
 // @category       Map Tiles
-// @version        0.1.3.20161003.2636
+// @version        0.1.3.20161003.4740
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/release/plugins/basemap-nokia-ovi.meta.js
 // @downloadURL    https://static.iitc.me/build/release/plugins/basemap-nokia-ovi.user.js
-// @description    [iitc-2016-10-03-002636] Add various map layers from Nokia OVI Maps.
+// @description    [iitc-2016-10-03-004740] Add various map layers from Nokia OVI Maps.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -26,7 +26,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc';
-plugin_info.dateTimeVersion = '20161003.2636';
+plugin_info.dateTimeVersion = '20161003.4740';
 plugin_info.pluginId = 'basemap-nokia-ovi';
 //END PLUGIN AUTHORS NOTE
 

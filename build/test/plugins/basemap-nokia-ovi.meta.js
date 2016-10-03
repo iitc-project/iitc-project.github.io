@@ -2,11 +2,11 @@
 // @id             iitc-plugin-nokia-ovi-maps
 // @name           IITC plugin: Nokia OVI maps
 // @category       Map Tiles
-// @version        0.1.3.20161003.4044
+// @version        0.1.3.20161003.4825
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/test/plugins/basemap-nokia-ovi.meta.js
 // @downloadURL    https://static.iitc.me/build/test/plugins/basemap-nokia-ovi.user.js
-// @description    [iitc-test-2016-10-03-004044] Add various map layers from Nokia OVI Maps.
+// @description    [iitc-test-2016-10-03-004825] Add various map layers from Nokia OVI Maps.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

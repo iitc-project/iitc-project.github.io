@@ -2,11 +2,11 @@
 // @id             iitc-plugin-regions@jonatkins
 // @name           IITC plugin: Show the local score regions
 // @category       Layer
-// @version        0.1.2.20161003.4044
+// @version        0.1.2.20161003.4825
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/test/plugins/regions.meta.js
 // @downloadURL    https://static.iitc.me/build/test/plugins/regions.user.js
-// @description    [iitc-test-2016-10-03-004044] Show the local scoring regions on the map. No actual scores - just the region areas.
+// @description    [iitc-test-2016-10-03-004825] Show the local scoring regions on the map. No actual scores - just the region areas.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -26,7 +26,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc-test';
-plugin_info.dateTimeVersion = '20161003.4044';
+plugin_info.dateTimeVersion = '20161003.4825';
 plugin_info.pluginId = 'regions';
 //END PLUGIN AUTHORS NOTE
 
