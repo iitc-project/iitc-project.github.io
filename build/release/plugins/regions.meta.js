@@ -2,11 +2,11 @@
 // @id             iitc-plugin-regions@jonatkins
 // @name           IITC plugin: Show the local score regions
 // @category       Layer
-// @version        0.1.2.20161002.202701
+// @version        0.1.2.20161003.2636
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/release/plugins/regions.meta.js
 // @downloadURL    https://static.iitc.me/build/release/plugins/regions.user.js
-// @description    [iitc-2016-10-02-202701] Show the local scoring regions on the map. No actual scores - just the region areas.
+// @description    [iitc-2016-10-03-002636] Show the local scoring regions on the map. No actual scores - just the region areas.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

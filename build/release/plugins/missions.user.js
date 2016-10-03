@@ -2,11 +2,11 @@
 // @id             iitc-plugin-missions@jonatkins
 // @name           IITC plugin: Missions
 // @category       Info
-// @version        0.1.2.20161002.202701
+// @version        0.1.2.20161003.2636
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/release/plugins/missions.meta.js
 // @downloadURL    https://static.iitc.me/build/release/plugins/missions.user.js
-// @description    [iitc-2016-10-02-202701] View missions. Marking progress on waypoints/missions basis. Showing mission paths on the map.
+// @description    [iitc-2016-10-03-002636] View missions. Marking progress on waypoints/missions basis. Showing mission paths on the map.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -26,7 +26,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc';
-plugin_info.dateTimeVersion = '20161002.202701';
+plugin_info.dateTimeVersion = '20161003.2636';
 plugin_info.pluginId = 'missions';
 //END PLUGIN AUTHORS NOTE
 

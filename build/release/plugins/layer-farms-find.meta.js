@@ -2,11 +2,11 @@
 // @id             iitc-plugin-farms@949
 // @name           IITC plugin: Show farms by level
 // @category       Info
-// @version        1.4.1.20161002.202701
+// @version        1.4.1.20161003.2636
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/release/plugins/layer-farms-find.meta.js
 // @downloadURL    https://static.iitc.me/build/release/plugins/layer-farms-find.user.js
-// @description    [iitc-2016-10-02-202701] Find farms by minimum level.
+// @description    [iitc-2016-10-03-002636] Find farms by minimum level.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

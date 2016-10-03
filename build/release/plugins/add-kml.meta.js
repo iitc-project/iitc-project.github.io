@@ -2,11 +2,11 @@
 // @id             overlay-kml@danielatkins
 // @name           IITC plugin: overlay KML
 // @category       Layer
-// @version        0.2.0.20161002.202701
+// @version        0.2.0.20161003.2636
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/release/plugins/add-kml.meta.js
 // @downloadURL    https://static.iitc.me/build/release/plugins/add-kml.user.js
-// @description    [iitc-2016-10-02-202701] Allow users to overlay their own KML / GPX files on top of IITC.
+// @description    [iitc-2016-10-03-002636] Allow users to overlay their own KML / GPX files on top of IITC.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

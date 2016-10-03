@@ -2,11 +2,11 @@
 // @id             iitc-plugin-guess-player-levels@breunigs
 // @name           IITC plugin: guess player level
 // @category       Info
-// @version        0.5.7.20161002.202708
+// @version        0.5.7.20161003.4044
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/test/plugins/guess-player-levels.meta.js
 // @downloadURL    https://static.iitc.me/build/test/plugins/guess-player-levels.user.js
-// @description    [iitc-test-2016-10-02-202708] Try to determine player levels from the data available in the current view.
+// @description    [iitc-test-2016-10-03-004044] Try to determine player levels from the data available in the current view.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

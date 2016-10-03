@@ -2,11 +2,11 @@
 // @id             iitc-plugin-bing-maps
 // @name           IITC plugin: Bing maps
 // @category       Map Tiles
-// @version        0.1.3.20161002.202708
+// @version        0.1.3.20161003.4044
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/test/plugins/basemap-bing.meta.js
 // @downloadURL    https://static.iitc.me/build/test/plugins/basemap-bing.user.js
-// @description    [iitc-test-2016-10-02-202708] Add the maps.bing.com map layers.
+// @description    [iitc-test-2016-10-03-004044] Add the maps.bing.com map layers.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -26,7 +26,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc-test';
-plugin_info.dateTimeVersion = '20161002.202708';
+plugin_info.dateTimeVersion = '20161003.4044';
 plugin_info.pluginId = 'basemap-bing';
 //END PLUGIN AUTHORS NOTE
 

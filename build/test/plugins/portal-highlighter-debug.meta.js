@@ -2,11 +2,11 @@
 // @id             iitc-plugin-highlight-portals-debug
 // @name           IITC plugin: Debug: Highlighers
 // @category       Debug
-// @version        0.1.0.20161002.202708
+// @version        0.1.0.20161003.4044
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/test/plugins/portal-highlighter-debug.meta.js
 // @downloadURL    https://static.iitc.me/build/test/plugins/portal-highlighter-debug.user.js
-// @description    [iitc-test-2016-10-02-202708] Various debug and/or temporary highlighters. Will change over time as needed.
+// @description    [iitc-test-2016-10-03-004044] Various debug and/or temporary highlighters. Will change over time as needed.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

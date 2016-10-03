@@ -2,11 +2,11 @@
 // @id             iitc-plugin-highlight-portals-my-level@vita10gy
 // @name           IITC plugin: highlight portals by my level
 // @category       Highlighter
-// @version        0.1.2.20161002.202708
+// @version        0.1.2.20161003.4044
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/test/plugins/portal-highlighter-portals-my-level.meta.js
 // @downloadURL    https://static.iitc.me/build/test/plugins/portal-highlighter-portals-my-level.user.js
-// @description    [iitc-test-2016-10-02-202708] Use the portal fill color to denote if the portal is either at and above, or at and below your level.
+// @description    [iitc-test-2016-10-03-004044] Use the portal fill color to denote if the portal is either at and above, or at and below your level.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

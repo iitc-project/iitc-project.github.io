@@ -1,9 +1,0 @@
-<ifModule mod_expires.c>
-ExpiresActive On
-ExpiresDefault "now"
-</ifModule>
-
-<ifModule mod_headers.c>
-Header set Access-Control-Allow-Origin "http://www.ingress.com"
-Header add Access-Control-Allow-Origin "https://www.ingress.com"
-</ifModule>

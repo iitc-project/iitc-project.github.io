@@ -2,7 +2,7 @@
 // @id             iitc-plugin-highlight-portals-my-portals@vita10gy
 // @name           IITC plugin: highlight my portals
 // @category  Deleted
-// @version        0.1.1.20161002.202701
+// @version        0.1.1.20161003.2636
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/release/plugins/portal-highlighter-my-portals.meta.js
 // @downloadURL    https://static.iitc.me/build/release/plugins/portal-highlighter-my-portals.user.js

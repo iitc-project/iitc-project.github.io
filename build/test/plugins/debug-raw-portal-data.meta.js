@@ -2,11 +2,11 @@
 // @id             iitc-plugin-raw-portal-data
 // @name           IITC plugin: Debug: Raw portal JSON data
 // @category       Debug
-// @version        0.2.4.20161002.202708
+// @version        0.2.4.20161003.4044
 // @namespace      rawdata
 // @updateURL      https://static.iitc.me/build/test/plugins/debug-raw-portal-data.meta.js
 // @downloadURL    https://static.iitc.me/build/test/plugins/debug-raw-portal-data.user.js
-// @description    [iitc-test-2016-10-02-202708] Developer debugging aid: Add a link to the portal details to show the raw data of a portal.
+// @description    [iitc-test-2016-10-03-004044] Developer debugging aid: Add a link to the portal details to show the raw data of a portal.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

@@ -2,11 +2,11 @@
 // @id             iitc-plugin-highlight-hide-team@vita10gy
 // @name           IITC plugin: Hide portal ownership
 // @category       Highlighter
-// @version        0.1.1.20161002.202701
+// @version        0.1.1.20161003.2636
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://static.iitc.me/build/release/plugins/portal-highlighter-hide-team.meta.js
 // @downloadURL    https://static.iitc.me/build/release/plugins/portal-highlighter-hide-team.user.js
-// @description    [iitc-2016-10-02-202701] Show all portals as neutral, as if uncaptured. Great for creating plans.
+// @description    [iitc-2016-10-03-002636] Show all portals as neutral, as if uncaptured. Great for creating plans.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*

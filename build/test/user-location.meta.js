@@ -2,18 +2,18 @@
 // @id             iitc-plugin-user-location@cradle
 // @name           IITC plugin: User Location
 // @category       Tweaks
-// @version        0.2.0.20151111.74206
+// @version        0.2.0.20161003.4044
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://secure.jonatkins.com/iitc/test/user-location.meta.js
-// @downloadURL    https://secure.jonatkins.com/iitc/test/user-location.user.js
-// @description    [jonatkins-test-2015-11-11-074206] Show user location marker on map
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
-// @include        https://www.ingress.com/mission/*
-// @include        http://www.ingress.com/mission/*
-// @match          https://www.ingress.com/mission/*
-// @match          http://www.ingress.com/mission/*
+// @updateURL      https://static.iitc.me/build/test/user-location.meta.js
+// @downloadURL    https://static.iitc.me/build/test/user-location.user.js
+// @description    [iitc-test-2016-10-03-004044] Show user location marker on map
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==
